@@ -1,0 +1,36 @@
+/* body > :not(:last-child) {
+  display: none;
+} */
+
+h1,
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #f00;
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 48px;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 38px;
+  text-align: center;
+  text-decoration: underline #f00;
+}
+
+p {
+  color: #00f;
+  font-size: 28px;
+  font-variant: small-caps;
+  /* text-align: left; */
+  text-indent: 28px;
+}
+
+a {
+  color: red;
+}
