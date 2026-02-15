@@ -6,35 +6,54 @@
     <meta name="description" content="começando a entender a CSS" />
     <meta name="author" content="Sandro Batista" />
 
-    <title>Introdução CSS</title>
+    <title>Introdução as Classes</title>
 
-    <link rel="stylesheet" href="/exercicios/modulo02/ex001/style.css" />
+    <style>
+      body {
+        background-color: #0d0d0d;
+      }
+
+      .default-color {
+        color: #d91818;
+      }
+
+      .highlight {
+        color: #f2b33d;
+      }
+
+      .link:link,
+      .link:visited {
+        color: #f25c05;
+      }
+    </style>
   </head>
   <body>
-    <h1>Entendendo a CSS</h1>
+    <h1 class="default-color">
+      Entendendo as <strong style="text-transform: uppercase">classes</strong>
+    </h1>
 
-    <p>
-      Veja o arquivo
-      <a href="../ex002/introducao-classes.html">Introdução a classes</a>
+    <p class="default-color">
+      Veja o primero exemplo
+      <a href="../ex001/introducao-css.html" class="link">Introdução ao CSS</a>
     </p>
 
-    <h2>Introdução</h2>
+    <h2 class="default-color">Introdução</h2>
 
-    <h3>Parte &#x2160;</h3>
-    <p>
+    <h3 class="default-color">Parte &#x2160;</h3>
+    <p class="default-color">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati rem,
       dicta, sed ea eos cum praesentium minus soluta debitis iste minima aliquid
       sunt! Libero numquam, molestiae repudiandae delectus fugiat eum.
     </p>
-    <p>
-      <a href="#">Lorem ipsum dolor</a> sit amet consectetur adipisicing elit.
-      Quas atque ullam magnam. Nam, sunt illo. Repellat cupiditate qui, alias
-      nulla id eaque, commodi aliquam quo consequatur quos explicabo rerum
-      reiciendis, at repudiandae velit consequuntur. Consequatur eaque ad
-      laborum voluptates dignissimos deserunt, laudantium doloremque iste,
-      incidunt alias obcaecati quae tempora fugit.
+    <p class="highlight">
+      <a href="#" class="link">Lorem ipsum dolor</a> sit amet consectetur
+      adipisicing elit. Quas atque ullam magnam. Nam, sunt illo. Repellat
+      cupiditate qui, alias nulla id eaque, commodi aliquam quo consequatur quos
+      explicabo rerum reiciendis, at repudiandae velit consequuntur. Consequatur
+      eaque ad laborum voluptates dignissimos deserunt, laudantium doloremque
+      iste, incidunt alias obcaecati quae tempora fugit.
     </p>
-    <p>
+    <p class="default-color">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic maiores
       debitis quidem saepe eos. Distinctio, libero cumque atque eum praesentium
       deleniti eligendi necessitatibus itaque porro corrupti aperiam modi iusto
@@ -47,7 +66,7 @@
       aperiam amet facilis tenetur incidunt, dignissimos fugit voluptates velit
       magnam dolores libero ipsa.
     </p>
-    <p>
+    <p class="highlight">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe fugit
       cupiditate suscipit ea, alias harum!
     </p>
