@@ -5,131 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Model</title>
 
-    <style>
-      body {
-        font-family: sans-serif;
-      }
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style-drawn.css" />
 
+    <style>
       h1 {
-        background-color: #a07c7c;
-        padding: 16px;
+        padding: 10px;
+        text-align: center;
       }
 
       h2 {
-        background-color: #37a951;
-        width: 50%;
-        height: 150px;
-        margin: 16px;
+        background-color: green;
+        padding: 5px 2.5px;
+        margin-bottom: 12px;
       }
 
       p {
         background-color: #ccc;
-      }
-
-      .container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        overflow: hidden;
-      }
-
-      .box {
-        border: 1px solid #000;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-
-        transition: all 1s;
-      }
-
-      .box:hover {
-        transform: scale(1.1);
-      }
-
-      .margin {
-        background-color: #ac855d;
-        width: 225px;
-        height: 225px;
-      }
-
-      .border {
-        background-color: #e3c489;
-        width: 175px;
-        height: 175px;
-      }
-
-      .padding {
-        background-color: #b5c287;
-        width: 125px;
-        height: 125px;
-      }
-
-      .content {
-        background-color: #86b2b8;
-        width: 75px;
-        height: 25px;
-        text-align: center;
-      }
-
-      span {
-        /* display: none; */
-        padding: 5px;
-
-        font-size: 13px;
-        font-weight: 500;
-
-        position: absolute;
-      }
-
-      .top {
-        top: 0;
-      }
-      .right {
-        right: -32px;
-
-        transform: rotate(90deg);
-      }
-      .bottom {
-        bottom: 0;
-      }
-      .left {
-        left: -28px;
-        transform: rotate(270deg);
+        margin-bottom: 6px;
       }
     </style>
   </head>
   <body>
-    <h1>Box Model</h1>
-
-    <div class="container">
-      <div class="box margin">
-        <span class="direction top">margin-top</span>
-        <span class="direction right">margin-right</span>
-        <span class="direction bottom">margin-bottom</span>
-        <span class="direction left">margin-left</span>
-        <div class="box border">
-          <span class="direction top">border-top</span>
-          <span class="direction right">border-right</span>
-          <span class="direction bottom">border-bottom</span>
-          <span class="direction left">border-left</span>
-          <div class="box padding">
-            <span class="direction top">padding-top</span>
-            <span class="direction right">padding-right</span>
-            <span class="direction bottom">padding-bottom</span>
-            <span class="direction left">padding-left</span>
-            <div class="box content">
-              <span class="direction">content</span>
-            </div>
+    <div class="drawn-container">
+      <div class="sub-container">
+        <div class="box margin">
+          <div class="container-dir">
+            <span class="name">margin</span>
+            <span class="dir top">margin-top</span>
+            <span class="dir right">margin-right</span>
+            <span class="dir bottom">margin-bottom</span>
+            <span class="dir left">margin-left</span>
           </div>
         </div>
+        <div class="box border">
+          <div class="container-dir">
+            <span class="name">border</span>
+            <span class="dir top">border-top</span>
+            <span class="dir right">border-right</span>
+            <span class="dir bottom">border-bottom</span>
+            <span class="dir left">border-left</span>
+          </div>
+        </div>
+        <div class="box padding">
+          <div class="container-dir">
+            <span class="name">padding</span>
+            <span class="dir top">padding-top</span>
+            <span class="dir right">padding-right</span>
+            <span class="dir bottom">padding-bottom</span>
+            <span class="dir left">padding-left</span>
+          </div>
+        </div>
+        <div class="box content"><div class="container-dir">content</div></div>
       </div>
     </div>
+    <hr />
+
+    <h1>Box Model</h1>
 
     <h2>Width e Height</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Architecto eos saepe recusandae placeat!</p>
+    <p>Ut quas rem necessitatibus eius.</p>
+
+    <h2>Margin</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Architecto eos saepe recusandae placeat!</p>
+    <p>Ut quas rem necessitatibus eius.</p>
+
+    <h2>Border</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Architecto eos saepe recusandae placeat!</p>
+    <p>Ut quas rem necessitatibus eius.</p>
+
+    <h2>Padding</h2>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Architecto eos saepe recusandae placeat!</p>
+    <p>Ut quas rem necessitatibus eius.</p>
+
+    <h2>Outline</h2>
 
     <p>Lorem ipsum dolor sit amet.</p>
     <p>Architecto eos saepe recusandae placeat!</p>
