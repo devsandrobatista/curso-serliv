@@ -27,11 +27,46 @@
 
       .main-heading {
         background-color: #acafd4;
+        margin-bottom: 0;
+
+        font-size: 38px;
         text-align: center;
       }
 
       .info {
+        background-color: #c7c9ea;
+        padding: 3px;
+        margin-top: 0;
         text-align: center;
+      }
+
+      .nav-container {
+        text-align: right;
+      }
+
+      .nav-list li {
+        display: inline-block;
+        list-style: none;
+      }
+
+      .nav-link:link,
+      .nav-link:visited {
+        background-color: #ddd;
+        padding: 10px;
+
+        color: #404040;
+        font-weight: 600;
+        text-decoration: none;
+
+        transition:
+          background-color 0.4s,
+          color 0.4s;
+      }
+
+      .nav-link:hover,
+      .nav-link:active {
+        background-color: #404040;
+        color: #fff;
       }
 
       .secondary-heading {
@@ -75,6 +110,14 @@
     <div class="container">
       <h1 class="main-heading">João da Silva</h1>
       <p class="info">Brasileiro, solteiro, 30 anos.</p>
+
+      <nav class="nav-container">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">GitHub</a></li>
+          <li><a href="#" class="nav-link">LinkedIn</a></li>
+          <li><a href="#" class="nav-link">YouTube</a></li>
+        </ul>
+      </nav>
       <h2 class="secondary-heading">Objetivo</h2>
       <p>Front-End Developer, Desenvolvedor Front End, WebDesigner</p>
       <h2 class="secondary-heading">Experiência profissional</h2>
