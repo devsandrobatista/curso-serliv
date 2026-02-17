@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagens</title>
+
+    <style>
+      body {
+        /* background 
+        -color
+        -image
+        -position / -size 
+        -repeat
+        -attachment
+        -origin
+        -clip*/
+        background: url("images/bg.jpg");
+
+        font-size: 22px;
+        font-family: sans-serif;
+      }
+
+      .container {
+        width: 700px;
+        margin: 0 auto;
+      }
+
+      .img-logo {
+        width: 400px;
+      }
+
+      img.html {
+        float: left;
+        /* shape-outside: margin-box; */
+      }
+
+      img.css {
+        float: right;
+        /* shape-outside: margin-box; */
+      }
+
+      p {
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trabalhando com imagens</h1>
+      <h2>Imagens vetoriais vs bitmap</h2>
+      <img
+        src="images/logo_ser-frontend-ico.png"
+        class="img-logo"
+        alt="logotipo serfrontend"
+      /><br />
+      <img
+        src="images/logo_ser-frontend-ico.svg"
+        class="img-logo"
+        alt="logotipo serfrontend"
+      />
+      <h2>Imagens transparentes</h2>
+      <img src="images/logo_ser-frontend-ico-transparente.gif" alt="" /><br />
+      <img src="images/logo_ser-frontend-ico-transparente.png" alt="" />
+      <h2>Gif animado</h2>
+      <img src="images/walk.gif" alt="animação mulher andando" width="100%" />
+
+      <h2>Float</h2>
+      <img src="images/html5.png" class="html" alt="Logotipo HTML5" />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem hic
+        ipsam ex reprehenderit suscipit nostrum consequuntur dicta, voluptas
+        tempora voluptate doloribus obcaecati odit error libero voluptatibus
+        magnam. Suscipit, quibusdam et?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+        perferendis assumenda corporis qui, ex laudantium tempora neque animi
+        odit iste provident. Omnis eius error, ipsum hic impedit ipsa illo
+        dolores eum atque expedita. Corrupti exercitationem doloribus tenetur
+        dolor praesentium possimus, delectus aliquam architecto temporibus ex
+        nemo autem vel sed ut quisquam aspernatur molestiae. Est alias
+        repellendus porro nesciunt commodi veniam mollitia doloremque veritatis,
+        a, sapiente enim quam sit! Deserunt eum expedita possimus odit facere
+        necessitatibus iusto nulla iste commodi. Quibusdam.
+      </p>
+      <img src="images/css3.png" class="css" alt="Logotipo CSS3" />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem hic
+        ipsam ex reprehenderit suscipit nostrum consequuntur dicta, voluptas
+        tempora voluptate doloribus obcaecati odit error libero voluptatibus
+        magnam. Suscipit, quibusdam et?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga
+        perferendis assumenda corporis qui, ex laudantium tempora neque animi
+        odit iste provident. Omnis eius error, ipsum hic impedit ipsa illo
+        dolores eum atque expedita. Corrupti exercitationem doloribus tenetur
+        dolor praesentium possimus, delectus aliquam architecto temporibus ex
+        nemo autem vel sed ut quisquam aspernatur molestiae. Est alias
+        repellendus porro nesciunt commodi veniam mollitia doloremque veritatis,
+        a, sapiente enim quam sit! Deserunt eum expedita possimus odit facere
+        necessitatibus iusto nulla iste commodi. Quibusdam.
+      </p>
+    </div>
+  </body>
+</html>
