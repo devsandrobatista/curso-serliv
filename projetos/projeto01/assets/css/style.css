@@ -8,7 +8,6 @@
 
 body {
   background: #cccccc;
-
   font: 1.6rem sans-serif;
 }
 
@@ -19,9 +18,7 @@ body {
   background:
     linear-gradient(0deg, rgba(0, 0, 0, 0.356) 100%, transparent),
     url("../images/bg-3.jpg") right center / cover;
-  /* background-attachment: ; */
   margin-bottom: 1.6rem;
-
   color: #fff;
 
   display: grid;
@@ -33,7 +30,6 @@ body {
 
 .hero-content {
   text-align: center;
-
   grid-column: 1 / -1;
   grid-row: 2 / -1;
 }
@@ -53,6 +49,7 @@ body {
 }
 
 .hero-nav {
+  padding: 0 1.2rem;
   grid-area: 1 / 2 / 2 / -1;
 }
 
@@ -73,25 +70,31 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
-
   transition: all 0.3s linear;
 }
 
 .hero-nav .navLink:hover,
 .navLink:active {
   background: rgba(0, 0, 0, 0.556);
-  color: #fff;
   border-color: #fff;
+  color: #fff;
 }
 
 /* M A I N */
 .mainContainer {
-  padding: 0 2.4rem;
   display: flex;
   justify-content: center;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .article {
   max-width: 970px;
+  width: 90%;
   background: #fff;
   padding: 1.6rem;
   margin-bottom: 2.4rem;
@@ -102,6 +105,16 @@ body {
   padding: 0.8rem 1.2rem;
   margin-bottom: 1.2rem;
   box-shadow: inset 0 -2px 0 #9e9e9e;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+
+  float: right;
+  object-fit: contain;
+  user-select: none;
 }
 
 .secondary-heading {
@@ -123,6 +136,8 @@ body {
   color: #00f;
   font-weight: 500;
   text-decoration: none;
+
+  transition: all 0.3s linear;
 }
 
 .link:hover,
@@ -130,12 +145,33 @@ body {
   background: #b3ada9;
 }
 
+.article-html .link:hover,
+.link:active {
+  background: #e34f26;
+  color: #fff;
+}
+.article-css .link:hover,
+.link:active {
+  background: #1572b6;
+  color: #fff;
+}
+.article-js .link:hover,
+.link:active {
+  background: #f7df1e;
+  color: #000;
+}
+
+
+/* F O O T E R */
 footer {
   padding: 1.6rem;
   margin-top: 2.4rem;
   background: rgba(0, 0, 0, 0.556);
+}
 
+.footerContent {
   color: #fff;
   font-size: 1.8rem;
   text-align: center;
+  text-shadow: 3px 3px 0 #000;
 }
