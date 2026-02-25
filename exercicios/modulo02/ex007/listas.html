@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Listas</title>
 
     <style>
@@ -11,13 +11,16 @@
       }
 
       ul li {
-        /* list-style:; */
         list-style-type: none;
-        list-style-position: inside;
-        list-style-image: url("https://images.icon-icons.com/4398/PNG/96/269305_warning-sign-icon.png");
+        list-style-position: outside;
+      }
+
+      ol li {
+        list-style: lower-latin inside;
       }
     </style>
   </head>
+
   <body>
     <h1>Listas</h1>
 
@@ -28,9 +31,9 @@
     </ul>
 
     <ol>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
     </ol>
   </body>
 </html>
