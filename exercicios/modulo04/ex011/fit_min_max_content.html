@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content</title>
+
+    <style>
+      .main-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .container {
+        width: 300px;
+        height: 500px;
+        padding: 16px;
+        border: 2px solid #000;
+        overflow: auto;
+      }
+
+      .item {
+        background: blueviolet;
+        padding: 5px;
+      }
+
+      .item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .fit-content .item {
+        width: fit-content;
+      }
+
+      .min-content .item {
+        width: min-content;
+      }
+
+      .max-content .item {
+        width: max-content;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container fit-content">
+        <div class="hero">
+          <h2 class="hero-heading">Fit Content</h2>
+        </div>
+        <div class="item i1">lorem</div>
+        <div class="item i2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
+          velit!
+        </div>
+        <div class="item i3">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ab
+          voluptate quidem aliquid minus. Deserunt esse provident dolorum autem
+          perspiciatis doloremque necessitatibus velit laudantium consectetur?
+        </div>
+        <div class="item i4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam vitae
+          labore mollitia esse modi consectetur natus distinctio alias quaerat
+          nostrum libero cum iste minima odit, eos laboriosam, voluptas est
+          rerum quae eveniet! Illum necessitatibus consequuntur voluptas itaque
+          accusamus odio eveniet asperiores minima, quisquam nihil provident
+          deserunt in? Assumenda porro possimus aperiam fugiat, consequuntur
+          iste esse nulla eveniet quaerat non explicabo laboriosam est iusto,
+          accusantium, minus praesentium quibusdam odit! Aliquam ullam alias eos
+          harum quam ut!
+        </div>
+      </div>
+      <div class="container min-content">
+        <div class="hero">
+          <h2 class="hero-heading">Min Content</h2>
+        </div>
+        <div class="item i1">lorem</div>
+        <div class="item i2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
+          velit!
+        </div>
+        <div class="item i3">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ab
+          voluptate quidem aliquid minus. Deserunt esse provident dolorum autem
+          perspiciatis doloremque necessitatibus velit laudantium consectetur?
+        </div>
+        <div class="item i4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam vitae
+          labore mollitia esse modi consectetur natus distinctio alias quaerat
+          nostrum libero cum iste minima odit, eos laboriosam, voluptas est
+          rerum quae eveniet! Illum necessitatibus consequuntur voluptas itaque
+          accusamus odio eveniet asperiores minima, quisquam nihil provident
+          deserunt in? Assumenda porro possimus aperiam fugiat, consequuntur
+          iste esse nulla eveniet quaerat non explicabo laboriosam est iusto,
+          accusantium, minus praesentium quibusdam odit! Aliquam ullam alias eos
+          harum quam ut!
+        </div>
+      </div>
+      <div class="container max-content">
+        <div class="hero">
+          <h2 class="hero-heading">Max Content</h2>
+        </div>
+        <div class="item i1">lorem</div>
+        <div class="item i2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
+          velit!
+        </div>
+        <div class="item i3">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet ab
+          voluptate quidem aliquid minus. Deserunt esse provident dolorum autem
+          perspiciatis doloremque necessitatibus velit laudantium consectetur?
+        </div>
+        <div class="item i4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam vitae
+          labore mollitia esse modi consectetur natus distinctio alias quaerat
+          nostrum libero cum iste minima odit, eos laboriosam, voluptas est
+          rerum quae eveniet! Illum necessitatibus consequuntur voluptas itaque
+          accusamus odio eveniet asperiores minima, quisquam nihil provident
+          deserunt in? Assumenda porro possimus aperiam fugiat, consequuntur
+          iste esse nulla eveniet quaerat non explicabo laboriosam est iusto,
+          accusantium, minus praesentium quibusdam odit! Aliquam ullam alias eos
+          harum quam ut!
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
