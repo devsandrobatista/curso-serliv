@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Exercício de FLexbox" />
+    <meta name="author" content="Sandro Batista" />
+    <title>Flexbox</title>
+
+    <style>
+      .flexbox {
+        height: 250px;
+        border: 3px solid #f00;
+        margin-bottom: 16px;
+
+        display: flex;
+        gap: 10px;
+      }
+
+      .flexbox div {
+        width: 300px;
+        border: 2px solid #f90;
+      }
+
+      .flex-container1 {
+        align-content: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .flex-container1 .item1 {
+        flex-grow: 1;
+      }
+
+      .flex-container1 .item4 {
+        flex-grow: 1;
+      }
+
+      .flex-container2 {
+        width: 300px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .flex-container2 div {
+        flex-basis: 50px;
+      }
+
+      .flex-container2 .item3 {
+        text-align: center;
+
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flexbox flex-container">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+    </div>
+    <div class="flexbox flex-container1">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+    </div>
+    <div class="flexbox flex-container2">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+      <div class="item4">4</div>
+    </div>
+  </body>
+</html>
