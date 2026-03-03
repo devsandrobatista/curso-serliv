@@ -1,0 +1,123 @@
+/* White Spaces (px)
+2, 4, 8, (12), 16, (24), 32, 48, 64, 80, 96, 112, 128, 144
+*/
+
+/* Fonte Size (px)
+10, 12, 14, 16, 18, 20, 24, 30, 36, 44, 52, 62, 74, 86, 98
+*/
+
+:root {
+  --color-title: #385555;
+}
+
+body {
+  background: #3a0ca3 linear-gradient(#050505, #3a0ca3);
+  font-size: 1.6rem;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  max-width: 500px;
+  width: 90%;
+  background: #312f2f;
+  padding: 1.2rem;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+
+  color: #fff;
+}
+
+.hero__title {
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 0 #385555;
+}
+
+.list-wrapper {
+  max-width: 500px;
+  width: 90%;
+  height: 500px;
+  background: #fff;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+
+  overflow: auto;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  padding: 1.6rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+
+  transition: background 0.5s linear;
+}
+
+.list__item:hover {
+  background: #e5e5e5;
+}
+
+.list__img img {
+  width: 7.4rem;
+  border-radius: 50%;
+}
+
+.list__info {
+  padding: 0 2rem;
+  flex-grow: 1;
+}
+
+.list__name {
+  color: var(--color-title);
+  font-size: 2.4rem;
+}
+
+.list__email:link,
+.list__email:visited {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.list__email:hover,
+.list__email:active {
+  text-decoration: underline;
+}
+
+.list__icons {
+  align-self: center;
+  display: flex;
+  gap: 1.2rem;
+
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.list__item:hover .list__icons {
+  opacity: 1;
+}
+
+.list__icon {
+  stroke: #999;
+  stroke-width: 2;
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+.list__icon:hover {
+  stroke: #555;
+}
