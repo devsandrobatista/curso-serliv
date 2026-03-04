@@ -1,3 +1,28 @@
-#0F172A  (fundo)
-#2563EB  (cor principal)
-#F8FAFC  (texto)
+:root {
+  --sb-bg: #0f172a;
+  --sb-surface: rgba(248, 250, 252, 0.06);
+  --sb-surface-2: rgba(248, 250, 252, 0.09);
+  --sb-border: rgba(248, 250, 252, 0.12);
+
+  --sb-text: #f8fafc;
+  --sb-muted: rgba(248, 250, 252, 0.72);
+
+  --sb-primary: #2563eb;
+  --sb-accent: #38bdf8;
+
+  /* 135deg */
+  --sb-grad: linear-gradient(135deg, var(--sb-primary), var(--sb-accent));
+  --sb-grad1-soft: rgba(37, 99, 235, 0.25);
+  --sb-grad2-soft: rgba(56, 189, 248, 0.22);
+
+  --sb-shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 24px rgba(0, 0, 0, 0.22);
+  --sb-shadow-md:
+    0 12px 30px rgba(0, 0, 0, 0.35), 0 40px 80px rgba(0, 0, 0, 0.25);
+  --sb-shadow-glow:
+    0 0 0 1px rgba(56, 189, 248, 0.25), 0 26px 70px rgba(37, 99, 235, 0.28);
+}
+
+.feature__icon svg {
+  width: 2.4rem;
+}
