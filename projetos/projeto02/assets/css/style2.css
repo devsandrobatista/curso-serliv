@@ -1,0 +1,114 @@
+/* White Spaces (px)
+2, 4, 8, (12), 16, (24), 32, 48, 64, 80, 96, 112, 128, 144
+*/
+
+/* Fonte Size (px)
+10, 12, 14, 16, 18, 20, 24, 30, 36, 44, 52, 62, 74, 86, 98
+*/
+
+:root {
+  --main-color: #385555;
+}
+
+body {
+  height: auto;
+  background: #00d4ff linear-gradient(#020024, #00d4ff, #020024);
+}
+
+.hero {
+  /* width: 100vw; */
+  height: 75px;
+  background: #312f2f;
+
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.list-wrapper {
+  min-height: 100vh;
+  padding: 2.4rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /* overflow: auto; */
+}
+
+.list {
+  height: 100%;
+  max-width: 960px;
+  width: 90%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.list__item {
+  background: #fff url("../images/thumb02.jpg") no-repeat;
+  background-size: 100%;
+
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.456);
+  text-align: center;
+
+  flex-basis: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  overflow: hidden;
+}
+
+.list__img img {
+  width: 7.4rem;
+  border-radius: 50%;
+  margin-top: 12rem;
+}
+
+.list__name {
+  margin-bottom: 1.2rem;
+  color: var(--main-color);
+  font-size: 2.4rem;
+}
+
+.list__email:link,
+.list__email:visited {
+  color: #aaa;
+  font-size: 1.8rem;
+  text-decoration: none;
+
+  transition: all 0.5s;
+}
+
+.list__email:hover,
+.list__email:active {
+  color: #555;
+  text-decoration: underline;
+}
+
+.list__icons {
+  background: #888;
+  padding: 0.8rem;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.list__icon {
+  width: 1.8rem;
+  cursor: pointer;
+}
+
+.list__icon:hover {
+  stroke: #aaa;
+}
