@@ -1,3 +1,23 @@
+# Menu
+
+- [Cores](#2-cores-color-tokens)
+- [Tipografia](#3-tipografia)
+- [Espaçamento](#4-espaçamento-spacing-system)
+- [Grid Layout](#5-grid--layout)
+- [Border Radius](#6-radius-cantos)
+- [Elevação e Sombra](#7-elevação-e-sombras-depth)
+- [Estados de interação](#8-estados-interaction-states)
+- [Componentes](#9-componentes-specs)
+  - [Botão](#91-button)
+  - [Planos](#92-pricing-card-plan-card)
+  - [Badge](#93-badge)
+  - [Inputs](#94-inputs)
+  - [Tabela](#95-table-comparação)
+- [Iconografia](#10-iconografia)
+- [Animação](#11-motion-animação)
+- [Acessibilidade](#12-acessibilidade-mínimo)
+  <br>
+
 # SANBANK — Design System (Handoff) v1.0
 
 ![Preview Site Example](assets/images/site-design.png)
@@ -10,6 +30,8 @@ Estética: dark mode premium + detalhes em azul (fintech).
 Sensação: “produto de dev” (preciso e bem acabado).
 
 ## 2. Cores (Color Tokens)
+
+[Menu](#menu)
 
 - **Core**
   - Background / Base: #0F172A
@@ -34,6 +56,8 @@ Sensação: “produto de dev” (preciso e bem acabado).
 
 ## 3. Tipografia
 
+[Menu](#menu)
+
 - **Fonte**
   - Inter (principal do produto)
 - **Escala tipográfica (Desktop)**
@@ -51,6 +75,8 @@ Sensação: “produto de dev” (preciso e bem acabado).
 
 ## 4. Espaçamento (Spacing System)
 
+[Menu](#menu)
+
 Baseado em grid de 8px.
 
 - **Tokens:**
@@ -63,6 +89,8 @@ Baseado em grid de 8px.
 
 ## 5. Grid & Layout
 
+[Menu](#menu)
+
 - **Container**
   - Max width: 1120px
   - Padding lateral: 16px (mobile) / 24px (desktop)
@@ -74,6 +102,8 @@ Baseado em grid de 8px.
 
 ## 6. Radius (Cantos)
 
+[Menu](#menu)
+
 - Small: 10px (inputs, badges)
 - Medium: 14px (botões)
 - Large: 18px (cards menores)
@@ -82,6 +112,8 @@ Baseado em grid de 8px.
 _Regra: use radius grande para dar “produto premium”._
 
 ## 7. Elevação e sombras (Depth)
+
+[Menu](#menu)
 
 O SANBANK usa sombras suaves e profundas (dark UI).
 
@@ -96,6 +128,8 @@ O SANBANK usa sombras suaves e profundas (dark UI).
 
 ## 8. Estados (Interaction States)
 
+[Menu](#menu)
+
 - **Botões**
   - Default: normal
   - Hover: levantar 1–2px + sombra aumenta
@@ -109,6 +143,8 @@ O SANBANK usa sombras suaves e profundas (dark UI).
   - Success: usar verde com moderação (feedback pontual)
 
 ## 9. Componentes (Specs)
+
+[Menu](#menu)
 
 ### 9.1 Button
 
@@ -164,12 +200,16 @@ O SANBANK usa sombras suaves e profundas (dark UI).
 
 ## 10. Iconografia
 
+[Menu](#menu)
+
 - Estilo: outline, minimalista, stroke uniforme.
 - Peso: stroke 2 (aprox).
 - Tamanho padrão: 20–24px em UI, 16px em tabelas.
 - _Evitar ícones “filled” misturados com outline._
 
 ## 11. Motion (Animação)
+
+[Menu](#menu)
 
 - **Duração**
   - Hover/press: 160–220ms
@@ -181,6 +221,8 @@ O SANBANK usa sombras suaves e profundas (dark UI).
 _Regra: animação sempre discreta (fintech)._
 
 ## 12. Acessibilidade (mínimo)
+
+[Menu](#menu)
 
 - Contraste alto (texto #F8FAFC sobre bg #0F172A é ótimo)
 - Focus visível (ring em accent)
