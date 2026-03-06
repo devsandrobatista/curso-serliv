@@ -4,410 +4,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Sandro Batista" />
+    <title>Planos</title>
     <link
-      rel="icon"
+      rel="shortcut icon"
       href="assets/images/sanbank__simplified-logo.png"
       type="image/png"
     />
-    <title>SANBANK</title>
-    <link rel="stylesheet" href="assets/css/general.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
+
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-header__container">
-        <div class="site-header__logo">
-          <img
-            src="assets/images/sanbank__main-logo--white.png"
-            alt="Logo Sanbank"
-            class="site-img__logo"
-          />
-        </div>
-        <nav class="site-header__navbar" aria-label="Navegação">
-          <ul class="site-header__list">
-            <li class="site-header__item">
-              <a href="#" class="site-header__link">Home</a>
-            </li>
-            <li class="site-header__item">
-              <a href="#" class="site-header__link site-header__link--active"
-                >Planos</a
-              >
-            </li>
-            <li class="site-header__item">
-              <a href="#" class="site-header__link">Suporte</a>
-            </li>
-            <li class="site-header__item">
-              <a href="#" class="site-header__link">Contato</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="site-header__hero">
-        <h1 class="site-header__title">
-          Escolha o plano que combina com seu fluxo de trabalho.
-        </h1>
-        <p class="site-header__subtitle">
-          Soluções bancárias para freelancers e profissionais de tecnologia.
-        </p>
-      </div>
+    <header class="header">
+      <img
+        src="assets/images/sanbank__main-logo--white.png"
+        alt="Logo SanBank"
+        class="header__logo-img"
+      />
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="btn header__link">Home</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="btn header__link header__link--active">Planos</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="btn header__link">Suporte</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="btn header__link">Contato</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="container">
-      <section class="section">
-        <div class="pricing">
-          <!-- Essencial Plan -->
-          <article class="plan">
-            <div class="plan__header">
-              <h2 class="plan__name">Essencial</h2>
-              <div class="plan__price">
-                <p class="plan__amount">R&#xFF04; 9,90</p>
-                <p class="plan__period">&sol; mês</p>
-              </div>
-            </div>
-
-            <div class="plan__body">
-              <ul class="plan__features">
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Conta digital gratuita (sem mensalidade)
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Pix ilimitado (envio e recebimento)
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Transferências entre contas instantâneas
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Atendimento via chat (horário comercial)
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Saques com tarifa (rede conveniada)
-                </li>
-              </ul>
-            </div>
-
-            <div class="plan__cta">
-              <button class="btn plan__btn">Assine já</button>
-            </div>
-          </article>
-
-          <article class="plan plan--recommended">
-            <div class="plan__header">
-              <h2 class="plan__name">Premium</h2>
-              <div class="plan__price">
-                <p class="plan__amount">R&#xFF04; 29,90</p>
-                <p class="plan__period">&sol; mês</p>
-              </div>
-            </div>
-
-            <div class="plan__body">
-              <ul class="plan__features">
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Tudo do Essencial +
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Saques gratuitos (mensal)
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Cofrinhos com rendimento automático
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Atendimento prioritário (chat e e-mail)
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Seguros opcionais com preço reduzido
-                </li>
-              </ul>
-            </div>
-
-            <div class="plan__cta">
-              <button class="btn plan__btn--recommended">Assine já</button>
-            </div>
-
-            <div class="plan__ribbon">&#x2B50; Recomendado</div>
-          </article>
-
-          <article class="plan">
-            <div class="plan__header">
-              <h2 class="plan__name">Gold</h2>
-              <div class="plan__price">
-                <p class="plan__amount">R&#xFF04; 59,90</p>
-                <p class="plan__period">&sol; mês</p>
-              </div>
-            </div>
-
-            <div class="plan__body">
-              <ul class="plan__features">
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Tudo do Premium +
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Saques ilimitados sem tarifa
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Assistente financeiro
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Investimentos com vantagens
-                </li>
-                <li class="features">
-                  <span class="feature__icon" aria-hidden="true"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m4.5 12.75 6 6 9-13.5"
-                      />
-                    </svg>
-                  </span>
-                  Atendimento 24/7 com gerente digital
-                </li>
-              </ul>
-            </div>
-
-            <div class="plan__cta">
-              <button class="btn plan__btn">Assine já</button>
-            </div>
-          </article>
-        </div>
+    <main>
+      <header class="hero">
+        <h1 class="hero__title">
+          Escolha o plano que combina com seu fluxo de trabalho.
+        </h1>
+      </header>
+      <section class="pricing">
+        <article class="plan">
+          <h2 class="plan__title">Essencial</h2>
+          <div class="plan__price">
+            <!-- contêiner para alinhamento -->
+            <p class="plan__amount">R&#65284; 3,95</p>
+            <p class="plan__period">/mês</p>
+          </div>
+          <ul class="plan__features">
+            <li class="plan__feature">1 Website</li>
+            <li class="plan__feature">1GB de Armazenamento</li>
+            <li class="plan__feature">10GB de transferência</li>
+          </ul>
+          <a href="#" class="btn plan__btn">Assine já</a>
+        </article>
+        <article class="plan">
+          <h2 class="plan__title">Premium</h2>
+          <div class="plan__price">
+            <!-- contêiner para alinhamento -->
+            <p class="plan__amount">R&#65284; 7,95</p>
+            <p class="plan__period">/mês</p>
+          </div>
+          <ul class="plan__features">
+            <li class="plan__feature">5 Website</li>
+            <li class="plan__feature">3GB de Armazenamento</li>
+            <li class="plan__feature">Transferência ilimitada</li>
+            <li class="plan__feature">10 horas de suporte mensais</li>
+          </ul>
+          <a href="#" class="btn plan__btn">Assine já</a>
+        </article>
+        <article class="plan">
+          <h2 class="plan__title">Gold</h2>
+          <div class="plan__price">
+            <!-- contêiner para alinhamento -->
+            <p class="plan__amount">R&#65284; 13,95</p>
+            <p class="plan__period">/mês</p>
+          </div>
+          <ul class="plan__features">
+            <li class="plan__feature">10 Website</li>
+            <li class="plan__feature">30GB de Armazenamento</li>
+            <li class="plan__feature">Transferência ilimitada</li>
+            <li class="plan__feature">30 horas de suporte mensais</li>
+            <li class="plan__feature">Email personalizado</li>
+          </ul>
+          <a href="#" class="btn plan__btn">Assine já</a>
+        </article>
       </section>
     </main>
   </body>
