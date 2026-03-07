@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: #312f2f url("../images/bg-2.jpg") center / cover;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  /* background: #000; */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.hero {
+  padding: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero__title {
+  font-size: 52px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.hero__subtitle {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid #fff;
+}
+
+.courses {
+  max-width: 800px;
+  width: 90%;
+  background: #fcfbfb;
+  padding: 12px;
+}
+
+.container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.course {
+  flex: 1 1 250px;
+  /* height: 170px; */
+}
+
+.course__image {
+  display: block;
+  width: 100%;
+}
+
+.course__title {
+  /* width: 100%; */
+  background: rgba(0, 0, 0, 0.856);
+  padding: 4px;
+  font-weight: 500;
+}
+
+/* White Spaces (px)
+2, 4, 8, (12), 16, (24), 32, 48, 64, 80, 96, 112, 128, 144
+*/
+
+/* Fonte Size (px)
+10, 12, 14, 16, 18, 20, 24, 30, 36, 44, 52, 62, 74, 86, 98,
+*/
