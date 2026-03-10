@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variáveis</title>
+
+    <style>
+      :root {
+        --default-height: 7.5em;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      header {
+        width: 100%;
+        height: var(--default-height);
+        background: rgba(255, 38, 0, 0.277);
+        font-size: 2rem;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      main {
+        /* min-height: 38.88em; */
+        min-height: calc(100vh - var(--default-height));
+        background: #ccc;
+        margin-top: var(--default-height);
+        font-size: 2rem;
+      }
+
+      footer {
+        height: 5em;
+        background: #00f;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <main>main</main>
+    <footer>footer</footer>
+  </body>
+</html>

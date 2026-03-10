@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Radius</title>
+
+    <style>
+      .container {
+        min-height: calc(100vh - 16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .subcontainer {
+        width: 200px;
+        height: 200px;
+        background: #fa0;
+
+        position: relative;
+      }
+
+      .subcontainer1 {
+        border-radius: 50px;
+      }
+
+      .elipse .subcontainer {
+        border-radius: 50px 20px 0 80px / 100px 50px 0 20px;
+      }
+
+      .esfera {
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 0, 0, 0.504);
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+      }
+
+      .esfera-top {
+        top: 0;
+      }
+
+      .esfera-bottom {
+        bottom: 0;
+      }
+
+      .esfera-top-right,
+      .esfera-bottom-right {
+        right: 0;
+      }
+
+      .esfera-top-left,
+      .esfera-bottom-left {
+        left: 0;
+      }
+
+      .ponto-center {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 50%;
+
+        position: absolute;
+      }
+
+      .ponto {
+        width: 10px;
+        height: 10px;
+        background: #000;
+        border-radius: 50%;
+
+        position: absolute;
+      }
+
+      .ponto-horizontal-left {
+        top: 100px;
+        left: 50px;
+      }
+
+      .ponto-horizontal-right {
+        top: 50px;
+        right: 20px;
+      }
+
+      .ponto-vertical-right {
+        bottom: 0;
+        right: 0;
+      }
+
+      .ponto-vertical-left {
+        bottom: 20px;
+        left: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="subcontainer subcontainer1">
+        <div class="esfera esfera-top esfera-top-right">
+          <div class="ponto-center"></div>
+        </div>
+        <div class="esfera esfera-top esfera-top-left">
+          <div class="ponto-center"></div>
+        </div>
+        <div class="esfera esfera-bottom esfera-bottom-right">
+          <div class="ponto-center"></div>
+        </div>
+        <div class="esfera esfera-bottom esfera-bottom-left">
+          <div class="ponto-center"></div>
+        </div>
+      </div>
+      <div class="elipse">
+        <div class="subcontainer">
+          <div class="ponto ponto-horizontal-right"></div>
+          <div class="ponto ponto-horizontal-left"></div>
+          <div class="ponto ponto-vertical-right"></div>
+          <div class="ponto ponto-vertical-left"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

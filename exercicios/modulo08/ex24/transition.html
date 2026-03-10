@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition</title>
+  </head>
+
+  <style>
+    .container {
+      /* background: #f00; */
+      min-height: calc(100vh - 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+      background: #fa0;
+      width: 200px;
+      height: 150px;
+
+      transition: width 1s;
+    }
+
+    .box:hover {
+      width: 400px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

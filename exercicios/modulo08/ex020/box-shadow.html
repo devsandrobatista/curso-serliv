@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow</title>
+
+    <style>
+      .container {
+        min-height: calc(100vh - 16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background: #fa0;
+        border-radius: 50px 20px 0 80px / 100px 50px 0 20px;
+        box-shadow: 10px 0 0 #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
