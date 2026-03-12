@@ -1,0 +1,187 @@
+:root {
+  --bg-header: #162028;
+  --bg-box-img: #003d52;
+  --bg-footer: #0b171f;
+  --color-variant: #8e99a2;
+  --color-text: #555;
+  --color-text-menu: #425564;
+  --color-text-footer: #6f8597;
+  --font-default: "Roboto", sans-serif;
+  --font-main: "Viaoda Libre", serif;
+}
+
+body {
+  color: var(--color-text);
+  font-family: var(--font-default);
+  font-size: 1.6rem;
+}
+
+.secondary-heading,
+.subtitle {
+  font-family: var(--font-main);
+  font-size: 3rem;
+  font-weight: 550;
+  letter-spacing: 1px;
+}
+
+.site-header {
+  min-height: 100vh;
+}
+
+.site-header__top {
+  background: var(--bg-header);
+  height: 3.5rem;
+  padding: 2.4rem 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.site-header__logo {
+  padding-left: 3.2rem;
+  color: #fff;
+  font-family: var(--font-main);
+  font-size: 2.4rem;
+}
+
+.site-header__list {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+}
+
+.site-header__link:link,
+.site-header__link:visited {
+  padding: 0.8rem;
+  color: var(--color-text-menu);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  position: relative;
+  transition: outline 0.1s linear;
+}
+
+.site-header__link::before {
+  content: "";
+  background: var(--color-variant);
+  height: 1px;
+
+  /* width: 0%;
+  border-radius: 11px; */
+
+  position: absolute;
+  bottom: 20%;
+  right: 0.8rem;
+  left: 0.8rem;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+}
+
+.site-header__link:hover {
+  color: var(--color-variant);
+}
+
+.site-header__link:active {
+  outline: 2px solid var(--color-text-menu);
+  border-radius: 4px;
+  color: var(--color-text-menu);
+}
+
+.site-header__link:hover::before {
+  transform: scaleX(1);
+}
+
+.site-header__link:active::before {
+  background: transparent;
+}
+
+.site-header__hero {
+  background: var(--bg-box-img) url("../images/topo.jpg") center / cover;
+  height: calc(100vh - 4.77rem);
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.about {
+  max-width: 868px;
+  padding: 1.2rem 2.4rem;
+  margin: 6.4rem auto 0;
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 3.2rem;
+}
+
+.about__text {
+  line-height: 1.8;
+}
+
+.gallery {
+  margin-top: 6.8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.gallery__image {
+  width: 100%;
+}
+
+.gallery__card {
+  max-width: 250px;
+}
+
+.gallery__content {
+  padding: 0.8rem;
+  margin-block-end: auto;
+}
+
+.gallery__title {
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.gallery__text {
+  font-size: clamp(0.8rem, 1.4rem, 1.6rem);
+}
+
+.brand {
+  background: var(--bg-box-img) url("../images/bg_detalhe.png") right bottom
+    no-repeat;
+  padding: 4.8rem;
+  color: #fff;
+}
+
+.brand__hero {
+  margin-bottom: 4.8rem;
+}
+
+.brand__title {
+  padding-top: 6.8rem;
+  font-size: 4.4rem;
+}
+
+.brand__subtitle {
+  font-size: 3.6rem;
+}
+
+.brand__text {
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.site-footer {
+  background: var(--bg-footer);
+  padding: 1.2rem;
+  color: var(--color-text-footer);
+  text-align: center;
+}
