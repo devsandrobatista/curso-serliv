@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #fed001;
+  --wrapper-dark: #0a090c;
+  --wrapper-blue: #020024;
+  --wrapper-light: #f8f7f4;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.hero-banner__highlight {
+  text-transform: uppercase;
+}
+
+.wrapper-dark {
+  background: var(--wrapper-dark);
+}
+.wrapper-yellow {
+  background: var(--primary-color);
+}
+.wrapper-light {
+  background: var(--wrapper-light);
+}
+.wrapper-blue {
+  background: var(--wrapper-blue);
+}
