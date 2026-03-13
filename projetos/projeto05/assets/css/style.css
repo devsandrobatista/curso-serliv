@@ -1,10 +1,16 @@
 :root {
   --primary-color: #fed001;
-  --wrapper-dark: #0a090c;
+  --primary-color-variant: #ffff38;
+  --wrapper-dark: #252422;
+  --wrapper-dark2: #0a090c;
   --wrapper-blue: #020024;
-  --wrapper-light: #f8f7f4;
+  --wrapper-light: #f2f8fc;
+  --text-color-light: #faf9f6;
 }
 
+/* ---------------
+  GENERAL DESIGN |
+------------------*/
 html {
   font-size: 62.5%;
 }
@@ -13,21 +19,153 @@ body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: 1.6rem;
 }
 
 .hero-banner__highlight {
   text-transform: uppercase;
 }
 
+.wrapper-dark,
+.wrapper-blue {
+  /* padding-top: 1px; */
+  color: var(--text-color-light);
+}
+
 .wrapper-dark {
   background: var(--wrapper-dark);
-}
-.wrapper-yellow {
-  background: var(--primary-color);
-}
-.wrapper-light {
-  background: var(--wrapper-light);
 }
 .wrapper-blue {
   background: var(--wrapper-blue);
 }
+
+.wrapper-yellow {
+  background: var(--primary-color)
+    linear-gradient(var(--wrapper-light), var(--primary-color-variant));
+}
+.wrapper-light {
+  background: var(--wrapper-light);
+}
+
+.container {
+  max-width: 127.6rem;
+  margin: 0 auto;
+}
+
+.flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:link,
+:visited {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  padding: 0.88889em;
+  border-radius: 8px;
+  color: var(--text-color-light);
+  font-size: 1.8rem;
+
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #d3ad01;
+}
+
+.secondary-title {
+  font-size: 3.6rem;
+}
+
+.tertiary-heading {
+  font-size: 2.4rem;
+}
+/* -------------
+  STYLE DESIGN |
+---------------- */
+.site-header {
+  padding: 2rem 0;
+}
+
+.site-header__list {
+  list-style: none;
+  gap: 0.8rem;
+}
+
+.site-header__link:link,
+.site-header__link:visited {
+  padding: 0.8em 1.2em;
+  border: 1px solid;
+  border-radius: 4px;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.site-header__link:hover,
+.site-header__link:active {
+  background: var(--wrapper-dark2);
+}
+
+.flex--hero {
+  gap: 14rem;
+}
+
+.hero-banner__title {
+  margin-bottom: 4.8rem;
+  font-size: 6.2rem;
+  font-weight: 600;
+}
+
+.courses {
+  padding: 3.2rem;
+  text-align: center;
+}
+
+.courses__list {
+  margin: 1.8rem 0;
+  padding: 1.8rem 0;
+  gap: 1.6rem;
+}
+
+.course {
+  border-radius: 9px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+  flex: 1;
+}
+
+.course__image {
+  display: block;
+  width: 100%;
+}
+
+.course__content {
+  padding: 1.2rem;
+  text-align: left;
+  margin-block: auto;
+}
+
+.course__title {
+  margin-bottom: 1.6rem;
+}
+
+.course__description {
+  line-height: 1.4;
+}
+
+.courses__btn {
+  margin-top: 2.4rem;
+  color: var(--wrapper-dark2);
+  font-weight: 500;
+}
+/* SIZES (px)
+- font
+10 12 14 16 18 20 24 30 36 44 52 62 74 86 98
+- white-space
+02 04 08 12 16 24 32 48 64 80 96 128
+*/
