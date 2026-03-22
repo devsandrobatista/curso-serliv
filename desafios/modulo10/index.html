@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil do Usuário</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        background: #dcdcdc;
+        font: 1.6rem sans-serif;
+      }
+
+      ::backdrop {
+        background: rgba(0, 0, 0, 0.456);
+      }
+
+      .btn {
+        background: #0057b1;
+        padding: 0.5714em;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background: #003164;
+      }
+
+      .btn:active {
+        transform: translateY(1px);
+      }
+
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        background: #faf9f6;
+        max-width: 45rem;
+        width: 90%;
+        margin-top: 2%;
+        padding: 1.2rem 2.4rem;
+        border-radius: 8px;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+
+      .profile-header {
+        padding: 0 0 1.2rem;
+        border-bottom: 1px solid #c9c9c9;
+      }
+
+      .profile-header__top {
+        margin-bottom: 1.6rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.6rem;
+      }
+
+      .profile-header__title {
+        font-size: 2.4rem;
+      }
+
+      .profile-header__popover:popover-open {
+        width: 50vw;
+        background: #0057b1;
+        padding: 0.8rem 1.6rem;
+        border-width: 1px;
+        border-radius: 8px;
+        color: #fff;
+        text-align: center;
+        line-height: 1.2;
+
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        user-select: none;
+      }
+
+      .info-contacts {
+        padding: 0.8rem 0;
+      }
+
+      .info-contacts__title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .address {
+        font-style: normal;
+      }
+
+      .address__link:link,
+      .address__link:visited {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .address__link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <header class="profile-header">
+          <div class="profile-header__top">
+            <h1 class="profile-header__title">Perfil de _sandrobs.dev</h1>
+            <dvi class="toggle">
+              <button
+                popovertarget="help"
+                class="btn profile-header__btn profile-header__btn--help"
+              >
+                Ajuda
+              </button>
+              <span id="help" popover class="profile-header__popover"
+                >O nome completo do usuário. Ele pode ser alterado nas
+                configurações do perfil.</span
+              >
+            </dvi>
+          </div>
+          <p><strong>Nome</strong>: Sandro Batista</p>
+        </header>
+        <article class="info-contacts">
+          <h2 class="info-contacts__title">Informações de Contato</h2>
+          <address class="address">
+            <p class="address__email">
+              <strong>Email</strong>:
+              <a class="address__link" href="mailto:sandrobs@dev.com"
+                >sandrobs@dev.com</a
+              >
+            </p>
+          </address>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popover</title>
+
+    <style>
+      .subcontainer {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 16px;
+      }
+      .subcontainer:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      :popover-open {
+        width: 300px;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      ::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .subcontainer--five :popover-open {
+        inset: unset;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Curso Web Design - popover</h1>
+      <div class="subcontainer subcontainer--one">
+        <button popovertarget="my-popover">Toggle popover</button>
+        <span id="my-popover" popover>My Popover</span>
+      </div>
+      <div class="subcontainer subcontainer--two">
+        <button popovertarget="my-popover2">
+          popover auto <small>(default)</small>
+        </button>
+        <span id="my-popover2" popover="auto">My Popover 02</span>
+      </div>
+      <div class="subcontainer subcontainer--three">
+        <button popovertarget="my-popover3">popover manual</button>
+        <span id="my-popover3" popover="manual">My Popover 03</span>
+      </div>
+      <div class="subcontainer subcontainer--four">
+        <button popovertarget="my-popover4" popovertargetaction="show">
+          show popover
+        </button>
+        <button popovertarget="my-popover4" popovertargetaction="hide">
+          hide popover
+        </button>
+        <span id="my-popover4" popover="manual">My Popover 04</span>
+      </div>
+      <div class="subcontainer subcontainer--five">
+        <button popovertarget="my-popover5" popovertargetaction="show">
+          show popover
+        </button>
+        <button popovertarget="my-popover5" popovertargetaction="hide">
+          hide popover
+        </button>
+        <span id="my-popover5" popover="manual">My Popover 05</span>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabela(s)</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .table {
+        width: 90%;
+        border-collapse: collapse;
+      }
+      .thead {
+        background: #bfc361;
+      }
+
+      .tbody {
+        background: #f5f5dc;
+      }
+
+      td,
+      th {
+        border: 1px solid #000;
+      }
+
+      th {
+        padding: 8px 16px;
+      }
+
+      td {
+        text-align: center;
+        padding: 6px 12px;
+      }
+
+      tfoot {
+        background: #e4e974;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table class="table">
+        <caption>
+          Tabelas de preços de cursos
+        </caption>
+        <thead class="thead">
+          <tr class="thead__row">
+            <th scope="col" class="thead__header">Área</th>
+            <th scope="col" class="thead__header">Curso</th>
+            <th scope="col" class="thead__header">Investimento</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr class="tbody__row">
+            <td rowspan="3" scope="row">Design</td>
+            <td>InDesign</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+          <tr>
+            <td>PhotoShop</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+          <tr>
+            <td>Illustrator</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+          <tr class="tbody__row">
+            <td rowspan="4" scope="row">Development</td>
+            <td>HTML</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+          <tr class="tbody__row">
+            <td>CSS</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+          <tr class="tbody__row">
+            <td>JavaScript</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+          <tr class="tbody__row">
+            <td>PHP</td>
+            <td>R$ 1.000,00</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Valores sujeitos a alterações sem prévio aviso</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 1.6rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        background: #95a5a6;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.6rem;
+      }
+
+      .container {
+        max-width: 35rem;
+        background: #ecf0f1;
+        border-radius: 4px;
+        box-shadow: 3px 3px 10px #333;
+      }
+
+      .form {
+        padding: 2.4rem 0;
+      }
+
+      .form__fieldset {
+        padding: 1.2rem;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+
+      .form__legend {
+        font-weight: 600;
+        font-size: 1.4rem;
+        text-align: center;
+      }
+
+      .form__container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form__label {
+        font-size: 1.4rem;
+        user-select: none;
+      }
+      .form__input {
+        padding: 0.4rem;
+      }
+
+      .form__buttons {
+        display: flex;
+        gap: 1.2rem;
+      }
+
+      .btn {
+        flex: 1;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      .btn--reset {
+        background: #cb0028;
+      }
+      .btn--reset:hover {
+        background: #ac0123;
+      }
+
+      .btn--submit {
+        background: #2c2b7f;
+      }
+      .btn--submit:hover {
+        background: #232267;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="main-title">Login</h1>
+      <div class="container">
+        <form action="" class="form">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Entre com seus dados de acesso</legend>
+            <div class="form__container">
+              <label for="username" class="form__label">Usuário</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                class="form__input"
+                required
+              />
+            </div>
+            <div class="form__container">
+              <label for="password" class="form__label">Senha</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form__input"
+                required
+              />
+            </div>
+            <div class="form__buttons">
+              <input type="reset" value="Limpar" class="btn btn--reset" />
+              <input type="submit" value="Entrar" class="btn btn--submit" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
