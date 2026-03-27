@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+
+    <style>
+      textarea {
+        /* resize: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Introdução</legend>
+        <input type="email" name="email" id="email" />
+        <br />
+        <label for="qtdDependentes">Quantidade de dependentes:</label><br />
+        <input
+          type="number"
+          name="qtdDependentes"
+          id="qtdDependentes"
+          min="0"
+          max="10"
+        />
+        <br /><br />
+        <input type="date" name="date" id="" min="2022-01-15" /> <br /><br />
+        Possui atividade extra?
+        <label for="sim"
+          ><input type="radio" name="atvExtra" value="s" id="sim" />Sim</label
+        >
+        <label for="nao"
+          ><input type="radio" name="atvExtra" value="n" id="nao" />Não</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>Área de Interesse</legend>
+        <label
+          ><input type="checkbox" name="interesse" value="html" />HTML</label
+        >
+        <label><input type="checkbox" name="interesse" value="css" />CSS</label>
+        <label
+          ><input
+            type="checkbox"
+            name="interesse"
+            value="JavaScript"
+          />JavaScript</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="interesse"
+            value="Python"
+          />Python</label
+        >
+        <label
+          ><input type="checkbox" name="interesse" value="Java" />Java</label
+        >
+        <br /><br />
+
+        <select name="linguagem" id="">
+          <option value="">Selecione a opção:</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="java">Java</option>
+        </select>
+
+        <input type="text" list="linguagemList" />
+        <datalist id="linguagemList">
+          <option value="HTML"></option>
+          <option value="CSS"></option>
+          <option value="JavaScript"></option>
+          <option value="Java"></option>
+          <option value="Python"></option>
+          <option value="PHP"></option>
+        </datalist>
+      </fieldset>
+      <fieldset>
+        <legend>Mensagem</legend>
+        <textarea name="msg" id="" rows="5" cols="50">
+CONTRATO DE ATUALIZAÇÃO
+1.1 REGRA 1
+
+1.2 REGRA 2
+        </textarea>
+        <label for="termos"
+          ><input type="checkbox" name="termos" id="termos" />Li e aceito o
+          contrato</label
+        >
+        <br /><br />
+        <input type="file" name="" id="" />
+      </fieldset>
+
+      <input type="hidden" name="" value="abcdef123" />
+      <br /><br />
+      <input type="submit" value="Enviar" />
+      <input type="button" value="Button" />
+      <button type="submit">Mandar com tag button</button>
+      <br /><br />
+
+      <input type="search" name="" id="" />
+      <br /><br />
+      <input type="range" name="" id="" min="0" max="10" step="5" />
+    </form>
+  </body>
+</html>

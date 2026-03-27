@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meter &amp; Progress</title>
+
+    <style>
+      progress {
+        accent-color: red;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      form div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      form span {
+        align-self: center;
+      }
+
+      input {
+        width: 50px;
+        text-align: center;
+      }
+
+      output {
+        width: 54px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Meter</h2>
+    <label for="combustivel">
+      Nível do Combustível:
+      <meter
+        value="50"
+        min="0"
+        max="100"
+        low="20"
+        optimum="75"
+        high="60"
+        id="combustivel"
+      ></meter>
+    </label>
+    <h2>Progress</h2>
+    <label for="">
+      Porcentagem da Tarefa:
+      <progress max="100" value="70">70%</progress>
+    </label>
+    <br /><br /><br />
+
+    <form action="" oninput="result.value = a.value * b.value">
+      <div>
+        <input type="number" min="0" name="a" id="a" />
+        <span>X</span>
+        <input type="number" min="0" name="b" id="b" />
+      </div>
+      <output name="result" for="a b">?</output>
+      <input type="reset" value="Limpar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="" class="form" autocomplete="off">
+          <fieldset class="form__field">
+            <legend class="form__legend">Formulário de Contato</legend>
+            <div class="form__subcontainer">
+              <label for="fullName" class="form__label">Nome Completo:</label>
+              <input
+                type="text"
+                name="fullName"
+                id="fullName"
+                required
+                placeholder="Digite o seu nome"
+                class="form__input form__input--name"
+              />
+            </div>
+            <div class="form__subcontainer">
+              <label for="email" class="form__label">E-mail:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Digite um email valido"
+                class="form__input form__input--email"
+              />
+            </div>
+            <div class="form__subcontainer">
+              <label for="subject" class="form__label">Assunto:</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                class="form__input form__input--subject"
+              />
+            </div>
+            <div class="form__subcontainer">
+              <label for="message" class="form__label">Mensagem</label>
+              <textarea
+                name="message"
+                id="message"
+                required
+                minlength="20"
+                maxlength="1000"
+                placeholder="Conte-nos tudo"
+                class="form__input form__input--message"
+              ></textarea>
+            </div>
+          </fieldset>
+          <input type="submit" class="btn form__btn" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
