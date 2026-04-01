@@ -1,0 +1,46 @@
+/* seletores de filhos
+:first-child
+:last-child
+:nth-child(n)
+:nth-child(odd)
+:nth-child(even)
+:nth-of-type()
+:nth-last-of-type
+:first-of-type
+:last-of-type
+*/
+
+p:first-child {
+  /* selecione o primeiro filho se for um parágrafo */
+  color: #f00;
+}
+
+p:last-child {
+  color: #f80;
+}
+
+p:nth-child(3) {
+  background: #0df;
+}
+
+p:first-of-type {
+  background: #0a0;
+}
+
+p:last-of-type {
+  background: #900;
+}
+
+p:nth-of-type(2) {
+  outline: 2px solid #ff0;
+}
+
+
+li:nth-child(3n + 1) {
+  /* odd ↦ ímpar, even ↦ par */
+  background: #aaa;
+}
+
+li:not(:nth-child(3n + 1)) {
+  background: rgba(255, 0, 0, 0.659);
+}

@@ -1,0 +1,27 @@
+article {
+  outline: 2px solid #66f;
+}
+
+article a {
+  /* todas as tags <a> dentro do <article> */
+  color: #f00;
+}
+
+article a > strong {
+  /* todos as tags <strong> que são filhos diretos de <a> dentro do <article> */
+  color: #0a0;
+}
+
+h3 + p {
+  /* tag <p> imediatamente após um <h3> */
+  background: #fd0;
+}
+
+h3 ~ p {
+  /* todas as tags <p> após um <h3> */
+  border: 4px dashed #f80;
+}
+
+article p:not(.destaque) {
+  background: #ccc;
+}
