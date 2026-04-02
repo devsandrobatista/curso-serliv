@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-classes</title>
+
+    <style>
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .btn {
+        background: #7a7979;
+        width: fit-content;
+        padding: 0.4em 0.8em;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn:not(:disabled):hover {
+        background: #616161;
+      }
+
+      a:focus {
+        background: #ff0;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      input[type="text"] {
+        width: 50%;
+        background: #aaa;
+        border: none;
+      }
+      input[type="text"]:read-write {
+        background: #ddd;
+      }
+      input[type="text"]:read-only:not(:disabled) {
+        background: #cc0;
+      }
+      input[type="text"]:disabled {
+        background: #900;
+        color: #fff;
+        cursor: not-allowed;
+      }
+      input[type="text"]::placeholder {
+        color: #900;
+        letter-spacing: 1px;
+      }
+      input[type="text"]:placeholder-shown {
+        background: #77f;
+      }
+
+      p:only-child {
+        border: 2px dotted #cc0;
+      }
+
+      p[contenteditable]:read-write {
+        width: fit-content;
+        border-bottom: 2px solid #900;
+        border-radius: 4px;
+      }
+      p[contenteditable]:focus {
+        border-bottom-color: transparent;
+      }
+
+      .spacing {
+        height: 50vh;
+      }
+
+      .initial {
+        position: absolute;
+        top: 0;
+      }
+
+      div:target {
+        border: 4px dashed #900;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="initial" id="top" aria-hidden="true"></div>
+    <div class="buttons">
+      <a href="#title">Ir para o Título</a>
+      <button onclick="show()" class="btn">Vai</button>
+      <button class="btn" disabled>Vai <small>disabled</small></button>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, hic?</p>
+    <p>ㅤ</p>
+    <p></p>
+
+    <ul>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+      <li><a href="#">link falso</a></li>
+    </ul>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Nisi laborum dolor sit excepturi.</p>
+    <p tabindex="0">Distinctio fuga tempora molestias et.</p>
+    <p tabindex="0">Modi maiores distinctio rerum quae.</p>
+    <p tabindex="0">Omnis commodi nemo voluptas velit?</p>
+    <p tabindex="0">Alias recusandae quae laborum perspiciatis?</p>
+
+    <form action="#">
+      <input type="text" value="valor inicial" />
+      <input type="text" value="valor" disabled />
+      <input type="text" value="valor" readonly />
+      <input type="text" placeholder="placeholder" />
+    </form>
+
+    <div>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <hr />
+    <div>
+      <p>Maiores fuga fugiat mollitia accusamus.</p>
+      <p>Enim quasi eius eaque dicta.</p>
+      <p contenteditable>paragrafo editável</p>
+    </div>
+
+    <div id="title">
+      <h1>Título</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vero minima
+        distinctio, enim debitis rem voluptatem quisquam dolores dolorum iure
+        cupiditate illum veniam voluptatum exercitationem ut libero fugit earum
+        sequi fugiat quis? Obcaecati aliquid voluptatem beatae ipsum officiis
+        quibusdam! Illo, deserunt eius. Natus quo earum suscipit ut, optio
+        fugiat voluptas.
+      </p>
+      <a href="#top">Voltar ao início</a>
+    </div>
+
+    <div class="spacing"></div>
+
+    <!-- JavaScript -->
+    <script>
+      function show() {
+        const emptyParagraph = document.querySelector("p:empty");
+        emptyParagraph.innerHTML = "Não estou mais vazio!";
+      }
+    </script>
+  </body>
+</html>
