@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varáveis</title>
+
+    <style>
+      :root {
+        --success-color: #0a0;
+        --error-color: #a00;
+      }
+
+      body {
+        --error-color: #fa0;
+        background: #252422;
+        color: #f4f1f8;
+      }
+
+      .container {
+        --error-color: #f88;
+      }
+
+      .subcontainer--error {
+        --error-color: #cc0;
+      }
+
+      .negrito {
+        color: var(--error-color);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="subcontainer subcontainer--success">
+        <p>Libero, corporis <span class="negrito">eligendi</span>?</p>
+      </div>
+      <div class="subcontainer subcontainer--error">
+        <p>Lorem, ipsum <span class="negrito">dolor</span>.</p>
+      </div>
+    </div>
+    <p>test<span class="emoji">(•_•)</span></p>
+  </body>
+</html>
