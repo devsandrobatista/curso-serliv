@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+
+    <style>
+      div {
+        width: 200px;
+        outline: 1px solid #888;
+        margin: 1em auto;
+      }
+
+      p {
+        width: 50%;
+      }
+
+      .destaque {
+        background: #ff5;
+      }
+
+      .div1 {
+        .destaque {
+          transform: translate(50px, -50px);
+        }
+      }
+
+      .div2 {
+        .destaque {
+          position: relative;
+          top: -50px;
+          left: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div1">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+      <div class="div2">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

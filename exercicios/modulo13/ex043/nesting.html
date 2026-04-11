@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Nesting</title>
+
+    <style>
+      .card {
+        background: #fff;
+
+        .card__title {
+          color: red;
+        }
+        .card__text {
+          color: blue;
+        }
+      }
+
+      .btn {
+        background: #bbb;
+        padding: 8px;
+        border: none;
+        border-radius: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition:
+          background 0.4s,
+          color 0.4s,
+          box-shadow 0.4s,
+          transform 0.3s;
+
+        &:hover {
+          background: #000;
+          box-shadow: 4px 4px 0 #bbb;
+          color: #fff;
+        }
+        &:active {
+          transform: translate(4px, 4px);
+          box-shadow: 1px 1px 0 #bbb;
+        }
+      }
+
+      .menu {
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(4px);
+        padding: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 0.5),
+          inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+          inset 0 0 20px 10px rgba(255, 255, 255, 1);
+        list-style: none;
+        display: flex;
+        gap: 16px;
+        > li {
+          padding: 8px;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background: #ddd;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2 class="card__title">Título</h2>
+      <p class="card__text">Texto</p>
+    </div>
+
+    <button class="btn">Clique aqui</button>
+
+    <ul class="menu">
+      <li class="menu__item">Home</li>
+      <li class="menu__item">Sobre</li>
+      <li class="menu__item">Contato</li>
+    </ul>
+  </body>
+</html>
