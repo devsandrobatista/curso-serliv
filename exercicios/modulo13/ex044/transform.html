@@ -6,8 +6,14 @@
     <title>transform</title>
 
     <style>
-      div {
-        width: 200px;
+      div.container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .container div {
+        flex-basis: 200px;
         outline: 1px solid #888;
         margin: 1em auto;
       }
@@ -31,6 +37,38 @@
           position: relative;
           top: -50px;
           left: 50px;
+          animation-direction:;
+        }
+      }
+
+      .div3 {
+        .destaque {
+          transform: rotate(30deg);
+        }
+      }
+
+      .div4 {
+        .destaque {
+          transform: scale(1.5);
+        }
+      }
+
+      .div5 {
+        .destaque {
+          transform: skew(45deg);
+        }
+      }
+
+      .div6 {
+        .destaque {
+          transform: translate(50px) rotate(45deg);
+          transform-origin: top left;
+        }
+      }
+      .div7 {
+        .destaque {
+          transform: rotate(45deg) translate(50px);
+          transform-origin: left top;
         }
       }
     </style>
@@ -51,6 +89,71 @@
         </p>
       </div>
       <div class="div2">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+      <div class="div3">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+      <div class="div4">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+      <div class="div5">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+      <div class="div6">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
+        </p>
+        <p class="destaque">
+          Libero voluptates asperiores architecto porro corporis dolor soluta
+          perferendis error.
+        </p>
+        <p>
+          Iure corporis velit rerum blanditiis corrupti numquam ad laboriosam
+          consequatur.
+        </p>
+      </div>
+      <div class="div7">
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, eum.
         </p>

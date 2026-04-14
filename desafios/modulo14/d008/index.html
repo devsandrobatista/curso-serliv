@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+
+    <style>
+      /* GERAL */
+      .check1 {
+        display: none;
+      }
+
+      label {
+        user-select: none;
+      }
+
+      .marker {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background: #f00;
+        border-radius: 8px;
+        font-size: 26px;
+
+        position: relative;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      /* CHECK1 */
+      .check1:checked + label .marker {
+        background: #0a0;
+      }
+
+      .check1:checked + label .marker::before {
+        content: "";
+        display: block;
+        border: 0.097em solid #fff;
+        border-top: transparent;
+        border-left: transparent;
+
+        position: absolute;
+        top: 0.077em;
+        right: 0.3em;
+        bottom: 0.3em;
+        left: 0.38em;
+        transform: rotate(45deg);
+      }
+
+      /* LBL2 */
+      .lbl2 input[type="checkbox"] {
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        overflow: hidden;
+        position: absolute;
+      }
+
+      .lbl2 input[type="checkbox"]:focus + span {
+        outline: 2px solid #000;
+      }
+
+      .lbl2 input[type="checkbox"]:checked + .marker {
+        background: #0a0;
+      }
+
+      .lbl2 input[type="checkbox"] + .marker::before {
+        content: "";
+        display: block;
+        border: 0.097em solid #fff;
+        border-top: transparent;
+        border-left: transparent;
+
+        opacity: 0;
+        position: absolute;
+        top: 0.077em;
+        right: 0.3em;
+        bottom: 0.3em;
+        left: 0.38em;
+        transform: rotate(45deg);
+        transition: opacity 0.5s;
+      }
+
+      .lbl2 input[type="checkbox"]:checked + .marker::before {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Checkbox</h1>
+
+    <div class="form1">
+      <input type="checkbox" class="check1" name="html" id="html" checked />
+      <label for="html"><span class="marker"></span>HTML</label>
+      <input type="checkbox" class="check1" name="css" id="css" />
+      <label for="css"><span class="marker"></span>CSS</label>
+      <input type="checkbox" class="check1" name="javascript" id="js" />
+      <label for="js"><span class="marker"></span>JavaScript</label>
+    </div>
+    <hr />
+    <div class="form2">
+      <label class="lbl2">
+        <input type="checkbox" checked name="" />
+        <span class="marker"></span>
+        HTML
+      </label>
+      <label class="lbl2">
+        <input type="checkbox" name="" />
+        <span class="marker"></span>
+        CSS
+      </label>
+      <label class="lbl2">
+        <input type="checkbox" name="" />
+        <span class="marker"></span>
+        JavaScript
+      </label>
+    </div>
+  </body>
+</html>
