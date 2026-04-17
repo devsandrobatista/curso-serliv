@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkbox</title>
+
+    <style>
+      .flex {
+        display: flex;
+      }
+
+      label {
+        user-select: none;
+      }
+
+      .container {
+        gap: 8px;
+      }
+
+      .switch {
+        --switch-color: #cfd8dc;
+        align-items: center;
+        gap: 4px;
+      }
+
+      input[type="checkbox"] {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .switch .marker {
+        width: 2em;
+        height: 1em;
+        border-radius: 1em;
+        outline: 2px solid var(--switch-color);
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          display: block;
+          background: var(--switch-color);
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          transform-origin: left;
+          transform: translateX(0);
+          transition: transform 0.3s linear;
+        }
+      }
+
+      .switch input[type="checkbox"] ~ .marker::before {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: var(--switch-color);
+        position: absolute;
+        transform: translateX(-100%);
+        transition: 0.3s linear;
+      }
+
+      .switch input[type="checkbox"]:checked ~ .marker::before {
+        transform: translateX(0);
+      }
+
+      .switch input[type="checkbox"]:checked ~ .marker::after {
+        background: #fff;
+        transform: translateX(100%);
+      }
+
+      .switch input[type="checkbox"]:focus ~ .marker {
+        outline: 2px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Checkbox</h1>
+    <div class="container flex">
+      <label class="switch flex">
+        <input type="checkbox" />
+        <div class="marker"></div>
+        <span>HTML</span>
+      </label>
+
+      <label class="switch flex">
+        <input type="checkbox" />
+        <div class="marker"></div>
+        <span>CSS</span>
+      </label>
+
+      <label class="switch flex">
+        <input type="checkbox" />
+        <div class="marker"></div>
+        <span>JavaScript</span>
+      </label>
+    </div>
+  </body>
+</html>
