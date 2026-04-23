@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Lib - Tipografia</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <header class="sidebar">
+        <nav class="sidebar__nav">
+          <a href="#" class="sidebar__link-profile">
+            <img
+              src="../assets/images/uifaces-popular-avatar.jpg"
+              alt="Imagem de perfil"
+              class="sidebar__avatar"
+            />
+          </a>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="../index.html" class="sidebar__link">Home</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="pages/typography.html" class="sidebar__link"
+                >Tipografia</a
+              >
+            </li>
+            <li class="sidebar__item">
+              <a href="pages/cards.html" class="sidebar__link">Cards</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="pages/lists.html" class="sidebar__link">Listas</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="pages/form.html" class="sidebar__link">Formulário</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="pages/buttons/html" class="sidebar__link">Botões</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="pages/tables/html" class="sidebar__link">Tabelas</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <h1 class="main__heading main__heading--primary">My Components</h1>
+        <article class="main__content">
+          <h2 class="main__heading main__heading--secondary">Tipografia</h2>
+          <p class="main__description highlight">
+            A tipografia transmite nossas definições de tamanhos e espaçamento e
+            deve ser utilizada respeitando a hierarquia dos elementos na
+            interface.
+          </p>
+        </article>
+
+        <section>
+          <h3 class="main__heading main__heading--tertiary">Elementos</h3>
+
+          <article>
+            <h4 class="main__heading">Textos</h4>
+            <p class="main__description">
+              Esse texto esta escrito em <b>negrito</b> e esse texto é um
+              <strong>texto forte</strong>
+            </p>
+            <p class="main__description">
+              Esse texto está em <i>itálico</i> e este está <em>com ênfase</em>
+            </p>
+            <p class="main__description">
+              Isto é um texto escrito de forma
+              <u class="underline" style="text-decoration: #f00 wavy underline"
+                >erada</u
+              >
+              e isso é um <a href="#">link</a>
+            </p>
+          </article>
+
+          <article>
+            <h4 class="main__heading">Sobrescrito e subscrito</h4>
+
+            <p class="main__description">3 <sup>2</sup> é igual a 9</p>
+            <p class="main__description">a fórmula da água é H<sub>2</sub>O</p>
+          </article>
+
+          <article>
+            <h4 class="main__heading">Abreviações</h4>
+
+            <p class="main__description">
+              Para criar páginas na web, precisamos aprender sobre
+              <a href="#html-dfn"
+                ><abbr title="HyperText Markup Language">HTML</abbr></a
+              >
+            </p>
+            <p class="main__description">
+              o
+              <dfn id="html-dfn"
+                ><abbr title="HyperText Markup Language">HTML</abbr></dfn
+              >
+              é a principal linguagem da web, onde podemos incluir nosso
+              conteúdo de form semântica.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
