@@ -24,33 +24,31 @@
               <a href="../index.html" class="sidebar__link">Home</a>
             </li>
             <li class="sidebar__item">
-              <a href="pages/typography.html" class="sidebar__link"
-                >Tipografia</a
-              >
+              <a href="typography.html" class="sidebar__link">Tipografia</a>
             </li>
             <li class="sidebar__item">
-              <a href="pages/cards.html" class="sidebar__link">Cards</a>
+              <a href="cards.html" class="sidebar__link">Cards</a>
             </li>
             <li class="sidebar__item">
-              <a href="pages/lists.html" class="sidebar__link">Listas</a>
+              <a href="lists.html" class="sidebar__link">Listas</a>
             </li>
             <li class="sidebar__item">
-              <a href="pages/form.html" class="sidebar__link">Formulário</a>
+              <a href="form.html" class="sidebar__link">Formulário</a>
             </li>
             <li class="sidebar__item">
-              <a href="pages/buttons/html" class="sidebar__link">Botões</a>
+              <a href="buttons/html" class="sidebar__link">Botões</a>
             </li>
             <li class="sidebar__item">
-              <a href="pages/tables/html" class="sidebar__link">Tabelas</a>
+              <a href="tables/html" class="sidebar__link">Tabelas</a>
             </li>
           </ul>
         </nav>
       </header>
       <main class="main">
         <h1 class="main__heading main__heading--primary">My Components</h1>
-        <article class="main__content">
+        <article class="main__content highlight">
           <h2 class="main__heading main__heading--secondary">Tipografia</h2>
-          <p class="main__description highlight">
+          <p class="main__description">
             A tipografia transmite nossas definições de tamanhos e espaçamento e
             deve ser utilizada respeitando a hierarquia dos elementos na
             interface.
@@ -101,6 +99,110 @@
               >
               é a principal linguagem da web, onde podemos incluir nosso
               conteúdo de form semântica.
+            </p>
+          </article>
+
+          <article>
+            <h4 class="main__heading">Citações</h4>
+
+            <blockquote>
+              <p class="main__description">
+                O ruim não é ter trabalho. O ruim é ter de trabalhar.
+              </p>
+              <cite>Seu Madruga</cite>
+            </blockquote>
+
+            <blockquote cite="https://developer.mozilla.org">
+              O elemento HTML &lt;blockquote&gt; (ou Elemento HTML de citação em
+              bloco) indica que o texto incluindo é uma longa citação.
+              <cite>MDN</cite>
+            </blockquote>
+
+            <p>
+              Segundo o Seu Madruga:
+              <q>A vingança nunca é plena, mata a alma e a envenena</q>.
+            </p>
+
+            <p>
+              De acordo com o site da Mozilla,
+              <q cite="https://www.mozilla.org/en-US/about/history/details/"
+                >Firefox foi lançado em 2004 e se tornou um dos navegadores mais
+                populares da web</q
+              >
+            </p>
+
+            <p>O filme <cite>Escola do Rock</cite> contém várias músicas.</p>
+          </article>
+
+          <article>
+            <h4 class="main__heading">"Coisas" de computador</h4>
+            <p>
+              A propriedade <code>background</code> do CSS serve para colocar
+              uma imagem de fundo
+            </p>
+
+            <pre>
+              Este texto é um texto pré-formatado, ou seja,
+              ele respeita os espaços e quebras de lina.
+            </pre>
+            <pre>
+              <code>
+                body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+
+  & :link,
+  & :visited {
+    font-family: inherit;
+    color: inherit;
+  }
+}
+              </code>
+            </pre>
+
+            <p>
+              Após executar o método <code>push()</code> obtive o retorno
+              <samp lang="en-US">undefined has not a push() function</samp>
+            </p>
+
+            <p>Pressione a tecla <kbd>CTRL</kbd> + <kbd>C</kbd> para copiar.</p>
+          </article>
+
+          <article>
+            <h4>Datas e horários</h4>
+            <p>
+              O evento ocorrerá em
+              <time datetime="2025-11-10">10 de novembro de 2026</time>.
+            </p>
+            <p>
+              O evento ocorrerá em
+              <time datetime="2026-11-10">10/11/2026</time>.
+            </p>
+            <p>
+              O evento ocorrerá as
+              <time datetime="2026-11-10T20:00:00-03:00"
+                >20h00 do dia 10 de novembro de 2026</time
+              >.
+            </p>
+
+            <h5 lang="en-US">JS Conference</h5>
+            <p>
+              O evento iniciará exatamente às
+              <time datetime="19:00">19h00</time>
+            </p>
+
+            <p>
+              O evento ocorrerá às 20h00 do dia
+              <del datetime="2026-04-24"
+                ><time datetime="2026-11-10">10 de novembro de 2026</time></del
+              >
+              <ins>
+                <time datetime="2026-11-11">11 de novembro de 2026</time> </ins
+              >.
             </p>
           </article>
         </section>
