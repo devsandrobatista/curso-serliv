@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Lib - Listas</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <header class="sidebar">
+        <nav class="sidebar__nav">
+          <a href="#" class="sidebar__link-profile">
+            <img
+              src="../assets/images/uifaces-popular-avatar.jpg"
+              alt="Imagem de perfil"
+              class="sidebar__avatar"
+            />
+          </a>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="../index.html" class="sidebar__link">Home</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="typography.html" class="sidebar__link">Tipografia</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="cards.html" class="sidebar__link">Cards</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="lists.html" class="sidebar__link">Listas</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="form.html" class="sidebar__link">Formulário</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="buttons/html" class="sidebar__link">Botões</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="tables/html" class="sidebar__link">Tabelas</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main main--cards">
+        <h1 class="main__heading main__heading--primary">My Components</h1>
+
+        <article class="highlight">
+          <h2 class="main__heading main__heading--secondary">Listas</h2>
+          <p class="main__description">
+            Listas são elementos usados para exibir uma coleção de itens
+            relacionados. Podem ser ordenadas ou não ordenadas, e são
+            frequentemente utilizadas para apresentar opções ou etapas.
+          </p>
+        </article>
+
+        <section>
+          <div class="row">
+            <article class="list list--unordered">
+              <h3 class="heading">Não Ordenada</h3>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </article>
+
+            <article class="list list--ordered">
+              <h3 class="heading">Ordenadas</h3>
+              <ol start="3">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ol>
+            </article>
+
+            <article class="list list--alternate">
+              <h3 class="heading">Alternadas</h3>
+              <ul class="alternate">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="row">
+            <article class="list list--unordered">
+              <h3 class="heading">Não Ordenada</h3>
+
+              <ul>
+                <li>Item 1</li>
+                <li>
+                  Item 2
+                  <ul>
+                    <li>Item 2.1</li>
+                    <li>
+                      Item 2.2
+                      <ul>
+                        <li>Item 2.2.1</li>
+                        <li>Item 2.2.2</li>
+                        <li>Item 2.2.3</li>
+                      </ul>
+                    </li>
+                    <li>Item 2.3</li>
+                  </ul>
+                </li>
+                <li>Item 3</li>
+              </ul>
+            </article>
+
+            <article class="list list--ordered">
+              <h3 class="heading">Ordenadas</h3>
+              <ol type="A" start="6">
+                <li>Item 1</li>
+                <li>
+                  Item 2
+                  <ol type="I" reversed>
+                    <li>Item 2.1</li>
+                    <li>
+                      Item 2.2
+                      <ol type="a" start="10">
+                        <li>Item 2.2.1</li>
+                        <li>Item 2.2.2</li>
+                        <li>Item 2.2.3</li>
+                      </ol>
+                    </li>
+                    <li>Item 2.3</li>
+                  </ol>
+                </li>
+                <li>Item 3</li>
+              </ol>
+            </article>
+
+            <article class="list list--both">
+              <h3 class="heading">Ambas</h3>
+              <ol type="I" class="both">
+                <li>Item 1</li>
+                <li>
+                  Item 2
+                  <ul>
+                    <li>Item 2.1</li>
+                    <li>Item 2.2</li>
+                    <li>Item 2.3</li>
+                  </ul>
+                </li>
+                <li>Item 3</li>
+              </ol>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!-- 
+        article.card*2>img.card__image+(div.card__content>h3.card__title{Título do Card}+p.card__description{Descrição do card com informações relevantes sobre o conteúdo.})
+-->
