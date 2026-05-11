@@ -36,10 +36,10 @@
               <a href="form.html" class="sidebar__link">Formulário</a>
             </li>
             <li class="sidebar__item">
-              <a href="buttons/html" class="sidebar__link">Botões</a>
+              <a href="buttons.html" class="sidebar__link">Botões</a>
             </li>
             <li class="sidebar__item">
-              <a href="tables/html" class="sidebar__link">Tabelas</a>
+              <a href="tables.html" class="sidebar__link">Tabelas</a>
             </li>
           </ul>
         </nav>
@@ -81,6 +81,62 @@
               <p>Email: contato@exemplo.com</p>
             </address>
           </div>
+        </section>
+
+        <section>
+          <h2 class="heading">Quiz</h2>
+
+          <form class="form-quiz">
+            <label for="tecnologia">Qual é a sua linguagem preferida?</label>
+            <select name="tecnologia" id="tecnologia">
+              <option value="">Selecione</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+
+            <div class="rquiz">
+              <label for="prioridade">Baixa Prioridade</label>
+              <input
+                type="radio"
+                name="prioridade"
+                id="prioridade"
+                value="baixa"
+              />
+            </div>
+            <div class="rquiz">
+              <label for="prioridade">Média Prioridade</label>
+              <input
+                type="radio"
+                name="prioridade"
+                id="prioridade"
+                value="media"
+              />
+            </div>
+            <div class="rquiz">
+              <label for="prioridade">Alta Prioridade</label>
+              <input
+                type="radio"
+                name="prioridade"
+                id="prioridade"
+                value="alta"
+              />
+            </div>
+
+            <label>
+              <input type="checkbox" name="copy" value="true" />
+              Desejo receber uma cópia da minha resposta por email
+            </label>
+            <label>
+              <input type="checkbox" name="human" value="true" />
+              Sou um humano
+            </label>
+
+            <div class="row">
+              <input type="reset" value="Limpar" class="btn" />
+              <input type="submit" value="Enviar" class="btn" />
+            </div>
+          </form>
         </section>
       </main>
     </div>

@@ -4,10 +4,13 @@
   --secondary-color-dark: #141518;
   --bg-color: #444856;
   --text-color: #e7e7e7;
+
+  --default-gap: 3rem;
 }
 
 body {
   background: var(--bg-color);
+  margin: 0;
   color: var(--text-color);
   font-family:
     "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -137,7 +140,7 @@ body {
 }
 
 h4 {
-  margin-bottom: 1.2rem;
+  margin-bottom: var(--default-gap);
 }
 
 kbd {
@@ -188,7 +191,7 @@ article:not(.main--cards article) {
 .row {
   padding-top: 1.6rem;
   display: flex;
-  gap: 1.6rem;
+  gap: var(--default-gap);
   justify-content: space-between;
 }
 
@@ -221,7 +224,7 @@ textarea {
   width: 100%;
 }
 
-.form-contact input,
+input,
 textarea,
 select {
   background: #ccc;
@@ -248,4 +251,18 @@ input[type="submit"].btn {
 input[type="submit"].btn:hover,
 input[type="submit"].btn:focus {
   background: var(--secondary-color-dark);
+}
+
+.form-quiz {
+  width: calc(50% - var(--default-gap) / 2);
+
+  & select {
+    width: 100%;
+  }
+}
+
+.rquiz {
+  max-width: 16rem;
+  display: flex;
+  gap: 0.8rem;
 }
