@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Lib - Cards</title>
+
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container flex">
+      <header class="sidebar">
+        <nav class="sidebar__nav">
+          <a href="#" class="sidebar__link-profile">
+            <img
+              src="../assets/images/uifaces-popular-avatar.jpg"
+              alt="Imagem de perfil"
+              class="sidebar__avatar"
+            />
+          </a>
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="../index.html" class="sidebar__link">Home</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="typography.html" class="sidebar__link">Tipografia</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="cards.html" class="sidebar__link">Cards</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="lists.html" class="sidebar__link">Listas</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="form.html" class="sidebar__link">Formulário</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="buttons.html" class="sidebar__link">Botões</a>
+            </li>
+            <li class="sidebar__item">
+              <a href="tables.html" class="sidebar__link">Tabelas</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main main--cards">
+        <h1 class="main__heading main__heading--primary">My Components</h1>
+
+        <article class="highlight">
+          <h2 class="main__heading main__heading--secondary">Tabelas</h2>
+          <p class="main__description">
+            As tabelas sao usadas para apresentar dados de forma estruturada.
+            Não deve ser usada para outros objetivos que não seja a
+            representação de dados ou informações. Possui as seguintes
+            variações:
+          </p>
+        </article>
+
+        <section>
+          <article>
+            <h3 class="heading">Tabela padrão</h3>
+            <table class="table table--default">
+              <thead>
+                <tr>
+                  <th class="table___head table___head--name" scope="col">
+                    Name
+                  </th>
+                  <th class="table__head table___head--title" scope="col">
+                    Title
+                  </th>
+                  <th class="table__head table___head--email" scope="col">
+                    Email
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Segun Adebayo</td>
+                  <td>Founder</td>
+                  <td>sage@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Mark Chandler</td>
+                  <td>Developer</td>
+                  <td>mark@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Lazar Nikolov</td>
+                  <td>DevRel</td>
+                  <td>lazark@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Javier Alaves</td>
+                  <td>Designer</td>
+                  <td>javi@serfrontend.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article>
+            <h3 class="heading">Tabela zebrada</h3>
+            <table class="table table--alternate">
+              <thead>
+                <tr>
+                  <th class="table___head table___head--name" scope="col">
+                    Name
+                  </th>
+                  <th class="table__head table___head--title" scope="col">
+                    Title
+                  </th>
+                  <th class="table__head table___head--email" scope="col">
+                    Email
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Segun Adebayo</td>
+                  <td>Founder</td>
+                  <td>sage@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Mark Chandler</td>
+                  <td>Developer</td>
+                  <td>mark@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Lazar Nikolov</td>
+                  <td>DevRel</td>
+                  <td>lazark@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Javier Alaves</td>
+                  <td>Designer</td>
+                  <td>javi@serfrontend.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article>
+            <h3 class="heading">Tabela zebrada com separação vertical</h3>
+            <table class="table table--alternate table--vertical-lines">
+              <thead>
+                <tr>
+                  <th class="table___head table___head--name" scope="col">
+                    Name
+                  </th>
+                  <th class="table__head table___head--title" scope="col">
+                    Title
+                  </th>
+                  <th class="table__head table___head--email" scope="col">
+                    Email
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Segun Adebayo</td>
+                  <td>Founder</td>
+                  <td>sage@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Mark Chandler</td>
+                  <td>Developer</td>
+                  <td>mark@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Lazar Nikolov</td>
+                  <td>DevRel</td>
+                  <td>lazark@serfrontend.com</td>
+                </tr>
+                <tr>
+                  <td>Javier Alaves</td>
+                  <td>Designer</td>
+                  <td>javi@serfrontend.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
+
+<!-- 
+        article.card*2>img.card__image+(div.card__content>h3.card__title{Título do Card}+p.card__description{Descrição do card com informações relevantes sobre o conteúdo.})
+-->

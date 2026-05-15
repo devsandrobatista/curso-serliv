@@ -9,7 +9,8 @@
 }
 
 body {
-  background: var(--bg-color);
+  background-image: url("../images/bg-unsplash-2x.png");
+  background-size: cover;
   margin: 0;
   color: var(--text-color);
   font-family:
@@ -49,6 +50,7 @@ body {
 }
 
 .sidebar {
+  --secondary-color: rgba(49, 51, 59, 0.8);
   background: var(--secondary-color);
   flex: 0 0 26rem;
 }
@@ -56,6 +58,10 @@ body {
 .sidebar__nav {
   padding: 4.8rem 2.4rem 2.4rem;
   text-align: right;
+
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .sidebar__link-profile {
@@ -99,6 +105,8 @@ body {
 }
 
 .main {
+  --bg-color: rgba(68, 72, 86, 0.6);
+  background: var(--bg-color);
   padding: 4.8rem 3.2rem;
 
   flex: 1 0;
@@ -238,18 +246,24 @@ select {
   padding-top: 0;
 }
 
-input[type="submit"].btn {
+.btn {
   display: inline-block;
   background: var(--secondary-color);
+  padding: 0.8rem;
   border: 2px solid var(--secondary-color-dark);
+  border-radius: 5px;
 
   color: var(--text-color);
   letter-spacing: 1px;
   cursor: pointer;
 }
 
-input[type="submit"].btn:hover,
-input[type="submit"].btn:focus {
+.btn--outline {
+  background: transparent;
+}
+
+.btn:hover,
+.btn:focus {
   background: var(--secondary-color-dark);
 }
 
@@ -265,4 +279,57 @@ input[type="submit"].btn:focus {
   max-width: 16rem;
   display: flex;
   gap: 0.8rem;
+}
+
+/* buttons */
+.buttons .heading {
+  margin-bottom: 0.8rem;
+}
+
+.btn--large {
+  padding: 1.2rem;
+}
+
+.btn--full {
+  display: block;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* tables */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table--default tr:not(tbody tr:last-child) {
+  border-bottom: 2px solid var(--secondary-color-dark);
+}
+
+.table th:last-child,
+.table td:last-child {
+  text-align: right;
+}
+
+.table td,
+th {
+  padding: 1.6rem;
+}
+
+.table th {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.table--alternate tbody tr:nth-child(odd) {
+  background: var(--secondary-color);
+}
+
+.table--vertical-lines td:not(:first-child),
+.table--vertical-lines th:not(:first-child) {
+  border-left: 1px solid var(--secondary-color-dark);
 }
