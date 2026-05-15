@@ -147,6 +147,10 @@ body {
   gap: 1.6rem;
 }
 
+.social__icon {
+  color: red;
+}
+
 h4 {
   margin-bottom: var(--default-gap);
 }
