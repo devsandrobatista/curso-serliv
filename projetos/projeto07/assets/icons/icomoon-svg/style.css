@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%;
+}
+
 .icon {
   display: inline-block;
   width: 1em;
