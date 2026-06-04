@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacing-default: 1.2rem;
+  --primary-color: #e43e5a;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(transparent, #e43e5a), url("../images/tile.png");
+  background-attachment: fixed;
+  background-blend-mode: color-burn;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.6rem;
+}
+
+section {
+  counter-reset: contador;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  /* background: #0077; */
+  max-width: 100rem;
+  width: 95%;
+  padding: 0 0 2.4rem;
+}
+
+.main-title {
+  padding-top: var(--spacing-default);
+  margin-bottom: var(--spacing-default);
+  text-align: center;
+}
+
+.colors {
+  padding: 1.6rem;
+  border: 8px dashed color-mix(in srgb, var(--primary-color), transparent 25%);
+  counter-increment: contador;
+  background-clip: padding-box;
+
+  &:before {
+    content: "[ " counter(contador) " ]";
+    margin-bottom: var(--spacing-default);
+
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+}
+
+.colors:not(:last-child) {
+  margin-bottom: var(--spacing-default);
+}
+
+.text {
+  text-indent: 1rem;
+  letter-spacing: 0.15rem;
+
+  &:first-letter {
+    font-size: 2rem;
+  }
+}
+
+.colors:nth-child(2) {
+  background-color: #fff;
+  background-clip: padding-box;
+  padding: 5rem;
+}
+
+.colors:nth-child(3) {
+  background: hsl(105deg, 100%, 50%, 0.5);
+  box-shadow: 4px 4px 6px 6px hsl(150deg, 100%, 35%) inset;
+  transition: background 0.5s;
+
+  &:hover {
+    background: hsl(105deg, 100%, 50%);
+  }
+}
+
+.colors:nth-child(4) {
+  background-image:
+    linear-gradient(235deg, hsl(70deg, 100%, 50%), hsl(235, 100%, 50%)),
+    linear-gradient(90deg, hsl(0deg, 100%, 50%), hsl(180deg, 100%, 50%));
+  background-clip: content-box, padding-box;
+  outline: 2.5px solid #fff;
+  outline-offset: -24px;
+
+  & .text {
+    padding: 1.2rem;
+  }
+
+  &:before {
+    padding: 0.8rem;
+  }
+}
+
+.colors:nth-child(5) {
+  background-image: radial-gradient(
+    circle,
+    hsl(270deg, 100%, 50%),
+    hsl(315deg, 100%, 50%),
+    color-mix(in oklch, hsl(360deg, 100%, 50%), #000)
+  );
+}
+
+.colors:nth-child(6) {
+  background: radial-gradient(circle at 0% 19%, blue 5%, #f008 5%);
+}
+
+.colors:nth-child(7) {
+  background: radial-gradient(closest-corner at 5% 19%, blue 50%, #f008 5%);
+}
+
+.colors:nth-child(8) {
+  background: radial-gradient(farthest-corner at 5% 19%, blue 50%, #f008 5%);
+}
+
+.colors:nth-child(9) {
+  background: radial-gradient(closest-side at 5% 19%, blue 50%, #f008 5%);
+}
+
+.colors:nth-child(10) {
+  background-image: radial-gradient(
+    farthest-side at 5% 19%,
+    blue 50%,
+    #f008 5%
+  );
+}
+
+.colors:nth-child(11) {
+  background-image: conic-gradient(
+    from 45deg,
+    red 0deg 90deg,
+    yellow 90deg 180deg,
+    green 180deg 270deg,
+    blue 270deg
+  );
+}
+
+.colors:nth-child(12) {
+  background-image: conic-gradient(from 45deg, red, green 90%, blue);
+}
+
+.colors:nth-child(13) {
+  background-image: conic-gradient(#f00, #f00);
+}

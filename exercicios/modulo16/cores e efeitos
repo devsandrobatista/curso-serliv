@@ -1,0 +1,14 @@
+PROPRIEDADES USADAS 
+
+• color-mix()
+background-color: color-mix(in srgb, red, transparent);
+
+• counter-increment, counter-reset, counter
+
+section > div > ::before
+section {counter-reset: contador;}
+div {counter-increment: contador;}
+::before {content: counter(contador);}
+
+• background-clip
+••••
