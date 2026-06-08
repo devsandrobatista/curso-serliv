@@ -148,9 +148,90 @@ section {
 }
 
 .colors:nth-child(12) {
-  background-image: conic-gradient(from 45deg, red, green 90%, blue);
+  background-image: conic-gradient(
+    from 45deg,
+    red 0deg 90deg,
+    blue 90deg 180deg,
+    green 180deg 270deg,
+    red 270deg 360deg
+  );
 }
 
 .colors:nth-child(13) {
-  background-image: conic-gradient(#f00, #f00);
+  background-image: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+  animation: rotate 1s linear infinite;
+
+  color: #fff;
+
+  position: relative;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    background: color-mix(#000, transparent);
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.colors:nth-child(14) {
+  background-image: repeating-linear-gradient(
+    to top right,
+    #fff 0px,
+    #fff 5px,
+    #000 5px,
+    #000 10px
+  );
+}
+
+.colors:nth-child(15) {
+  background-image: repeating-radial-gradient(
+    #fff 0px,
+    #fff 5px,
+    #000 10px,
+    #000 20px
+  );
+}
+
+.colors:nth-child(16) {
+  background-image:
+    repeating-conic-gradient(
+      transparent 0deg,
+      transparent 5deg,
+      #000 10deg,
+      #000 20deg
+    ),
+    repeating-radial-gradient(#f00 0%, transparent, #00f 20%);
+  background-attachment: fixed, scroll;
+}
+
+.colors:nth-child(17) {
+  background-image:
+    repeating-radial-gradient(#f00 0%, transparent, #00f 20%),
+    repeating-linear-gradient(#f00, #00f);
+  background-attachment: scroll, fixed;
+}
+
+.colors:nth-child(18) {
+  box-shadow: 10px 10px 6px rgb(0 0 0 / 0.8);
+}
+
+.colors:nth-child(19) {
+  filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.8));
+}
+
+.colors:nth-child(20) {
+  background-image: linear-gradient(to top right, transparent 50%, #f00 50%);
+  filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.8));
 }

@@ -11,4 +11,7 @@ div {counter-increment: contador;}
 ::before {content: counter(contador);}
 
 • background-clip
-••••
+
+• filter: hue-rotate()
+
+• aspect-ratio
