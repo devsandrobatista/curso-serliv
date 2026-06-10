@@ -31,3 +31,34 @@ White-space
          80
           96
            128
+
+07 (•)
+26 (→)
+32 ( )
+40 (())
+176 (░)
+196 (─)
+219 (█)
+
+
+background → image position/size repeat origin clip attachment color
+
+font → style variant weight size/line-height family
+
+position → property duration timing-function delay
+
+animation → name duration timing-function delay iteration-count direction fill-mode play-state
+         
+
+Tipos de propriedade              Ordem comum
+——————————————————————————————————————————————
+posição                           X Y         
+——————————————————————————————————————————————
+tamanho                           width height
+——————————————————————————————————————————————
+transformação                     X Y
+——————————————————————————————————————————————
+shorthand spacing                 Y X
+——————————————————————————————————————————————
+X → horizontal
+Y → vertical

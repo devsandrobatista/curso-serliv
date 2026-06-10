@@ -17,24 +17,27 @@ body {
 .main-hero__heading {
   color: var(--color-primary);
   font-size: 4.8rem;
+  text-shadow: 3px 3px 0 #0007;
   text-align: center;
 }
 
 .cards {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 1.4rem;
 }
 
 .card {
+  /* flex: 1 0 calc(33% - 1.4rem); */
+  flex: 1 1 clamp(300px, calc(33% - 1.4rem), 400px);
   background: linear-gradient(
     135deg,
     transparent 25px,
     var(--color-primary) 25px
   );
-  width: 90%;
-  max-width: 300px;
   padding: 2.4rem;
 
   filter: drop-shadow(0 0 5px #000);
