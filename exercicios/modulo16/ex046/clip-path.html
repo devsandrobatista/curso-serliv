@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,10 +47,12 @@
       .example {
         width: 0;
         height: 0;
-        background: #ff0;
+        /* background: #ff0; */
         margin-top: 30px;
-        border-top: 30px solid #000;
-        border-right: 30px solid transparent;
+        border-top: 10px solid #000;
+        border-right: 25px solid transparent;
+        border-bottom: 45px solid #808;
+        border-left: 25px solid transparent;
       }
 
       .clippath__box {
@@ -61,7 +63,11 @@
       }
 
       .clippath__box:nth-child(1) {
-        clip-path: polygon();
+        clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 20% 20%);
+      }
+
+      .clippath__box:nth-child(2) {
+        clip-path: inset(10px 20px 30px 40px);
       }
     </style>
   </head>
