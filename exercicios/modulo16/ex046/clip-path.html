@@ -65,9 +65,17 @@
       .clippath__box:nth-child(1) {
         clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 20% 20%);
       }
-
       .clippath__box:nth-child(2) {
-        clip-path: inset(10px 20px 30px 40px);
+        clip-path: circle(100px at center);
+      }
+      .clippath__box:nth-child(3) {
+        clip-path: ellipse(50% 50px at center);
+      }
+      .clippath__box:nth-child(4) {
+        clip-path: inset(20px 30px 40px 50px);
+      }
+      .clippath__box:nth-child(5) {
+        clip-path: inset(20px round 30px 40px 50px);
       }
     </style>
   </head>
