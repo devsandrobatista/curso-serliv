@@ -1,0 +1,45 @@
+Imagem tem uma dimensão natural.
++-------------------------+
+|                         |
+|       1200 x 8000       |
+|                         |
++-------------------------+
+
+O Navegador mostra a imagem no tamanho real dela.
+
+Se a imagem for maior que o espaço disponível. Ela pode:
+
+► aumentar o container
+► empurrar outros elementos
+► ultrapassar o limite da tela
+
+Quase todo projeto começa com essa regra:
+img {
+  max-width: 100%;
+}
+Significa que a imagem não pode ser maior que o espaço disponível.
+
+max-width não define o tamanho da imagem. Apenas coloca o um limite.
+
+► width = tamanho desejado
+► max-width = teto máximo
+
+Pergunte-se:
+1. A imagem é maior que o espaço disponível?
+    ► Sim → ela diminui.
+    ► Não → mantém o tamanho
+2. Eu quero que ela ocupe todo o espaço?
+    ► Sim → width: 100%;
+    ► Não → talvez apenas max-width: 100%.
+
+max-width: 100%
+Não faz a imagem crescer. Ele apenas impede que ela fique maior que o pai.
+
+Então o pensamento profissional é:
+
+Por que isso aconteceu?
+Porque as imagens possuem proporções e dimensões diferentes.
+Qual foi a consequência?
+Os cards ficaram com alturas diferentes.
+
+Essa forma de pensar ajuda muito quando você estiver depurando layouts.

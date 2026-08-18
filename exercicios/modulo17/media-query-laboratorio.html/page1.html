@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media query Laboratório</title>
+
+    <style>
+      body {
+        background: #868e96;
+        min-height: calc(100vh - 16px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn {
+        width: 220px;
+        height: 60px;
+        background: #1864ab;
+        border: none;
+        border-radius: 0.75rem;
+
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+
+        transform: skew(-10deg);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        filter: drop-shadow(0 15px 20px rgb(11, 114, 133, 0.5));
+      }
+
+      @media (hover: hover) {
+        .btn:hover {
+          transform: skew(-10deg), scale(1.08);
+          background: blueviolet;
+          box-shadow:
+            0 0 5px #1864ab,
+            0 0 25px #1864ab,
+            0 0 50px #1864ab,
+            0 0 200px #1864ab;
+        }
+      }
+
+      @media (hover: none) {
+        .btn {
+          padding: 8px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Button</button>
+  </body>
+</html>

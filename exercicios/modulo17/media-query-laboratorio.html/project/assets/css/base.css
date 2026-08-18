@@ -1,0 +1,42 @@
+/* =====================
+   HTML
+====================== */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* =====================
+   Body
+====================== */
+body {
+  background-color:;
+  color:;
+  font-size:;
+  font-family:;
+}
+
+/* =====================
+   Typography
+====================== */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-52);
+  font-weight: var(--font-weight-700);
+  line-height: var(--line-height-tight);
+}
+/* =====================
+   Images
+====================== */
+
+/* =====================
+   Buttons
+====================== */
+
+/* =====================
+   Inputs
+====================== */
+
+/* =====================
+   Selection
+====================== */

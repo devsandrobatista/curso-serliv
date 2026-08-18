@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query Laboratório</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <style>
+      :root {
+        /* Paleta de Cores */
+        --cor1: #b9b8bf;
+        --cor2: #00090d;
+        --cor3: #011f26;
+        --cor4: #a90a0a;
+        --cor5: #ee250f;
+
+        /* Paleta de cores fundo */
+        --bgc1: #7d8587;
+        --btn-shadow: 0 0 0 var(--cor3);
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        min-height: 6.4rem;
+        padding: 1.6rem 3.2rem;
+      }
+
+      .btn {
+        background: var(--cor1);
+        /* margin-top: 2.4rem;
+        margin-left: 1.2rem; */
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 0.3rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+        cursor: pointer;
+        transition:
+          background 0.3s,
+          transform 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+
+      .btn--buy {
+        background: var(--cor5);
+        color: #fff;
+      }
+
+      @media (hover: hover) {
+        .btn--buy:hover {
+          background: var(--cor4);
+        }
+        .btn--favorite:hover {
+          background: #dd0;
+        }
+        .btn--contactar:hover {
+          background: var(--bgc1);
+        }
+
+        .wrapper:hover .btn {
+          box-shadow: 2px 4px 0 var(--cor3);
+        }
+        .wrapper:hover .btn--buy {
+          transform: scale(1.08);
+        }
+        .wrapper:hover > :not(.btn--buy) {
+          transform: scale(0.9);
+        }
+        .wrapper > .btn--buy:active {
+          transform: scale(1.08) translate(2px, 4px);
+          box-shadow: var(--btn-shadow);
+        }
+        .wrapper > :not(.btn--buy):active {
+          transform: scale(0.9) translate(2px, 4px);
+          box-shadow: var(--btn-shadow);
+        }
+      }
+
+      @media (pointer: coarse) {
+        .wrapper {
+          gap: 1.8rem;
+        }
+        .btn {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <button class="btn btn--buy">Comprar</button>
+        <button class="btn btn--favorite">Favoritar</button>
+        <button class="btn btn--contactar">Contatar</button>
+      </div>
+    </div>
+  </body>
+</html>

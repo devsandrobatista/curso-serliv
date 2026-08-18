@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+
+    <style>
+      @media screen and (max-width: 500px) {
+        body {
+          background: #625;
+          color: #fff;
+        }
+      }
+
+      a {
+        color: inherit;
+      }
+
+      @media screen and (min-width: 600px) {
+        body {
+          background: #33a;
+        }
+      }
+
+      .test {
+        background: #f55;
+        width: 320px;
+        height: 80px;
+      }
+    </style>
+  </head>
+  <body class="only-print">
+    <h1 class="title">Media Query</h1>
+    <a href="responsive-cards.html" title="Visite a página de cards responsivos"
+      >Responsive Cards</a
+    >
+    <div class="test">Teste</div>
+  </body>
+</html>

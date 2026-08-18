@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidades de Medidas</title>
+
+    <style>
+      html {
+        font-size: 32px;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+      }
+
+      h1,
+      h2 {
+        font-weight: 300;
+      }
+
+      div {
+        outline: 2px solid #f00;
+        min-height: 80px;
+      }
+
+      .unid--pixel .unid__text {
+        background: #ff0;
+        font-size: 16px;
+
+        & b {
+          font-size: 24px;
+        }
+      }
+      .unid--em .unid__text {
+        background: #ff0;
+        padding: 1em;
+        font-size: 1em;
+
+        & b {
+          font-size: 1.5em;
+        }
+      }
+      .unid--rem .unid__text {
+        background: #ff0;
+        padding: 1em;
+        font-size: 1rem;
+
+        & b {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (min-width: 53.75em) {
+        body {
+          background: #7d7d7d;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Unidades de Medidas em projetos responsivos</h1>
+      <p>
+        Esta é uma página de exemplo para demonstrar o uso de unidades de
+        medidas em projetos responsivos.
+      </p>
+      <section class="unids">
+        <article class="unid unid--pixel">
+          <h2 class="unid__title">Pixels (px)</h2>
+          <div class="unid__text">
+            <p class="unid__description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+              at?
+            </p>
+            <p class="unid__sub-description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis cupiditate ipsa eum distinctio laudantium praesentium
+              unde, eveniet tempora dolorem amet.<b>Lorem, ipsum dolor.</b>
+            </p>
+          </div>
+        </article>
+        <article class="unid unid--em">
+          <h2 class="unid__title">em</h2>
+          <div class="unid__text">
+            <p class="unid__description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+              at?
+            </p>
+            <p class="unid__sub-description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis cupiditate ipsa eum distinctio laudantium praesentium
+              unde, eveniet tempora dolorem amet.<b>Lorem, ipsum dolor.</b>
+            </p>
+          </div>
+        </article>
+        <article class="unid unid--rem">
+          <h2 class="unid__title">rem</h2>
+          <div class="unid__text">
+            <p class="unid__description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+              at?
+            </p>
+            <p class="unid__sub-description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis cupiditate ipsa eum distinctio laudantium praesentium
+              unde, eveniet tempora dolorem amet.<b>Lorem, ipsum dolor.</b>
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

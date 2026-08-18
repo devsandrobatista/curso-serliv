@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query Laboratório</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <style>
+      :root {
+        --color-shadow: rgb(0, 0, 0, 0.456);
+      }
+      .hero {
+        padding: 1.6rem 3.2rem;
+      }
+      .hero__content {
+        margin-bottom: 3.2rem;
+      }
+      .hero__title {
+        margin-bottom: 2.4rem;
+        text-transform: capitalize;
+      }
+      .hero__text {
+        padding: 0 2.4rem;
+      }
+      .hero__cta {
+        display: flex;
+        justify-content: center;
+      }
+      .hero__btn {
+        display: block;
+        background: #3a9dfb;
+        padding: 1.2rem 2.4rem;
+        border-radius: 0.8rem;
+        box-shadow:
+          0 1px 0 var(--color-shadow),
+          0 4px 10px var(--color-shadow);
+
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 var(--color-shadow);
+
+        transition: background 0.3s linear;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0a090c;
+          color: #fff;
+        }
+
+        .hero__btn {
+          background: #7b2ff7;
+          box-shadow:
+            0 1px 0 #312f2f,
+            0 4px 10px #fff;
+        }
+
+        .hero__btn:hover {
+          background: #f57ac8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="emoji">&#x2728;</span>Descubra novas possibilidades
+          </h1>
+          <p class="hero__text">
+            Explore conteúdos criativos e ideias inspiradoras que podem
+            transformar sua rotina. Dê o primeiro passo hoje e veja até onde
+            pode chegar.
+          </p>
+        </div>
+        <div class="hero__cta">
+          <a href="#" class="hero__btn">Começar Agora</a>
+        </div>
+      </header>
+    </main>
+  </body>
+</html>

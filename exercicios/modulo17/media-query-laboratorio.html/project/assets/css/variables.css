@@ -1,0 +1,80 @@
+:root {
+  /* =====================
+     Typography
+  ====================== */
+
+  /* Font Family */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Font Weight */
+  --font-weight-400: 400; /* regular */
+  --font-weight-600: 600; /* semi-bold */
+  --font-weight-700: 700; /* bold */
+
+  /* Font Size */
+  --font-size-12: 12;
+  --font-size-14: 14;
+  --font-size-16: 16;
+  --font-size-18: 18;
+  --font-size-20: 20;
+  --font-size-24: 24;
+  --font-size-30: 30;
+  --font-size-36: 36;
+  --font-size-44: 44;
+  --font-size-52: 52;
+
+  /* Line Height */
+  --line-height-1: 1;
+  --line-height-1-2: 1.2;
+  --line-height-1-5: 1.5;
+  --line-height-1-7: 1.7;
+
+  /* =====================
+     Colors
+  ====================== */
+  /* Brand */
+  --color-brand-primary: #2563eb;
+  --color-brand-secondary: #7c3aed;
+
+  /* Neutral */
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-secondary: #475569;
+  --color-border: #cbd5e1;
+  --color-dark: #0f172a;
+
+  /* =====================
+     Spacing
+  ====================== */
+  --space-8: 0.8rem;
+  --space-12: 1.2rem;
+  --space-16: 1.6rem;
+  --space-24: 2.4rem;
+  --space-32: 3.2rem;
+  --space-48: 4.8rem;
+  --space-64: 6.4rem;
+  --space-96: 9.6rem;
+
+  /* =====================
+     Border Radius
+  ====================== */
+  --radius-8: 0.8rem;
+  --radius-12: 1.2rem;
+  --radius-16: 1.6rem;
+  --radius-full: 99.9rem;
+
+  /* =====================
+     Shadows
+  ====================== */
+  --shadow-small: 0 0.4rem 1.2rem rgb(15 23 42 / 0.08);
+  --shadow-medium: 0 0.8rem 2.4rem rgb(15 23 42 / 0.12);
+
+  /* =====================
+     Layout
+  ====================== */
+  --container-width: 120rem;
+  --container-padding: 2.4rem;
+  --section-spacing: 9.6rem;
+}
