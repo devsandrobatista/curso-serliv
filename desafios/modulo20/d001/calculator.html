@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <style>
+      body {
+        background: linear-gradient(#5d61f2, #27296b);
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div#calculator {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 60px);
+        gap: 0.5em;
+
+        width: 300px;
+        padding: 20px;
+        /* background: linear-gradient(#5981a4, #2b4772); */
+        background: linear-gradient(#d0d0dd0, #666666, #3d3d3d);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0 0 0 / 0.8);
+      }
+
+      #display,
+      .btn {
+        background: linear-gradient(#353535, #1b1717);
+        color: #fff;
+      }
+
+      #display {
+        box-shadow: inset 3px 3px 0 #161616;
+        padding: 8px;
+
+        font-size: 2em;
+
+        grid-row: 1;
+        grid-column: 1 / -1;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .btn {
+        /* border: 3px solid #000;
+        border-left-color: #8a8a8a;
+        border-top-color: #8a8a8a; */
+
+        border: none;
+        box-shadow:
+          -2px -2px 0 #8a8a8a,
+          inset -2px -2px 0 #000;
+        border-radius: 3px;
+
+        font-size: 1em;
+
+        transition:
+          box-shadow 0.4s,
+          transform 0.3s;
+        cursor: pointer;
+
+        &:active {
+          box-shadow:
+            0 0 0 #8a8a8a,
+            inset -2px -2px 0 #000;
+          transform: translate(-1px, -1px);
+        }
+        &:hover {
+          background: linear-gradient(#353535 100%, #1b1717 20%);
+        }
+      }
+
+      .span-row-2 {
+        grid-column: 4;
+        grid-row: span 2;
+      }
+      .span-column-2 {
+        grid-column: span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="calculator">
+      <output id="display">0</output>
+
+      <button class="btn">AC</button>
+      <button class="btn">%</button>
+      <button class="btn">X</button>
+      <button class="btn">/</button>
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn">=</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn">-</button>
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn span-row-2">+</button>
+      <button class="btn span-column-2">0</button>
+      <button class="btn">,</button>
+    </div>
+  </body>
+</html>
