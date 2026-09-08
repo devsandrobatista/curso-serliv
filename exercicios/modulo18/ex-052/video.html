@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incorporating Elements - Video</title>
+  </head>
+  <style>
+    .video-container {
+      /* border: 2px solid red; */
+      border-radius: 0.25em;
+      overflow: hidden;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <body>
+    <main>
+      <h1 class="main-title">Incorporando Elementos - Videos</h1>
+      <section class="video">
+        <h2 class="video__title">Video 1</h2>
+        <!-- <audio src="assets/audio/mozart_trompa.mp3" controls></audio> (método simples) -->
+        <div class="video-container">
+          <video controls>
+            <source src="assets/videos/video.mp4" type="video/mp4" />
+            <source src="assets/videos/video.ogv" type="video/ogg" />
+            <source src="assets/videos/video.webm" type="video/webm" />
+            <track src="assets/videos/caption/track.pt.vtt" kind="captions" srclang="pt" label="Português"></track>
+            <track src="assets/videos/caption/track.en.vtt" kind="captions" srclang="en" label="English"></track>
+          </video>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incorporating Elements - Iframe</title>
+
+    <style>
+      .iframe-container {
+        display: flex;
+        gap: 1em;
+      }
+
+      iframe {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 class="main-title">Incorporando Elementos - Iframe</h1>
+      <section class="iframe">
+        <h2 class="iframe__title">Iframe</h2>
+        <div class="iframe-container">
+          <iframe src="audio.html" frameborder="0"></iframe>
+          <!-- <div style="padding: 56.25% 0 0 0; position: relative"> -->
+          <iframe
+            src="https://www.youtube.com/embed/droXQi9cHdg?si=9kK2hhsVijVDGFGP"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <!-- </div> -->
+        </div>
+      </section>
+    </main>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+  </body>
+</html>
