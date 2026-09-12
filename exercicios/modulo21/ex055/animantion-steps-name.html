@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Animation</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        height: 100vh;
+        background: #0e1512 linear-gradient(#1c1c1c 30%, #6a0dad);
+        white-space: nowrap;
+        color: #9f886f;
+        font-family: cursive, sans-serif;
+      }
+
+      .container {
+        position: relative;
+      }
+
+      .typing {
+        display: inline-block;
+        border-right: 0.1em solid #9f886f;
+        font-size: 5em;
+        font-weight: 600;
+
+        overflow: hidden;
+        animation:
+          typeAndDelete 4s steps(11) infinite,
+          blinkCursor 0.5s step-end infinite alternate;
+      }
+
+      @keyframes blinkCursor {
+        50% {
+          border-right-color: transparent;
+        }
+      }
+
+      @keyframes typeAndDelete {
+        0%,
+        10% {
+          width: 0;
+        }
+        45%,
+        55% {
+          width: 45.5rem;
+        }
+        90%,
+        100% {
+          width: 0;
+        }
+      }
+
+      /* reflection effect */
+      .reflection {
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5, transparent));
+        opacity: 0.4;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transform: scaley(-1);
+      }
+
+      @media (max-width: 780px) {
+        .typing {
+          font-size: 3em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading-container">
+        <span class="heading typing">@devsandrobatista</span>
+        <span class="reflection typing">@devsandrobatista</span>
+      </div>
+    </div>
+  </body>
+</html>
