@@ -1,1 +1,168 @@
-body {}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 0 0, #fff8ce, #ffb61d);
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 83.75em;
+  margin: 0 auto;
+}
+
+.highlight-word {
+  color: #f00;
+  text-transform: uppercase;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.header {
+  padding: 3em 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.hero > * {
+  flex: 1 0 0;
+}
+
+.hero__title {
+  font-size: 3.87rem;
+}
+
+.hero__description {
+  font-weight: 300;
+}
+
+.hero__form {
+  display: flex;
+  gap: 1em;
+}
+
+.hero__form input {
+  padding: 1em;
+  border: 1px solid #28293e;
+  border-radius: 6px;
+  outline: none;
+  font-family: inherit;
+}
+
+.hero__form input[type="text"] {
+  background: transparent;
+
+  &:placeholder-shown {
+    background-color: transparent;
+  }
+
+  &:not(:placeholder-shown) {
+    background: #fff8ce;
+  }
+}
+
+.hero__btn-form {
+  background: #031d44;
+  color: #fff;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .hero__btn-form:hover {
+    background: color-mix(#031d44, #fff8ce 10%);
+  }
+}
+
+.hero__animation {
+  position: relative;
+}
+
+.hero__smiley-img {
+  position: absolute;
+  animation: emojiMove 3s infinite alternate;
+
+  &:nth-child(1) {
+    animation-delay: 0.5s;
+    top: 165px;
+    left: -50px;
+  }
+  &:nth-child(2) {
+    animation-delay: 1s;
+    top: 26px;
+    left: 365px;
+  }
+  &:nth-child(4) {
+    animation-delay: 1.5s;
+    top: 350px;
+    left: 60px;
+  }
+  &:nth-child(5) {
+    animation-delay: 2s;
+    top: -60px;
+    left: 82px;
+  }
+  &:nth-child(6) {
+    animation-delay: 2.5s;
+    top: 278px;
+    left: 396px;
+  }
+}
+
+@keyframes emojiMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-10px, -30px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+    padding: 2em 0;
+  }
+
+  .hero__smiley-img:nth-child(4) {
+    top: 310px;
+    left: 60px;
+  }
+  .hero__smiley-img:nth-child(3) {
+    top: -16px;
+  }
+}
+
+@media (max-width: 780px) {
+  body {
+    min-height: 100dvh;
+  }
+
+  .header {
+    padding: 52px 0 0;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__description {
+    margin-bottom: 24px;
+  }
+
+  .hero__animation {
+    display: none;
+  }
+}

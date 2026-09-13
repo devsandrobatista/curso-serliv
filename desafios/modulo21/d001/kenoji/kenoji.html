@@ -1,39 +1,75 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kenoji</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div id="wrapper">
-      <header>
-        <img src="images/logo.svg" alt="Kenoji" />
+    <div class="wrapper">
+      <header class="header">
+        <img class="header__logo" src="assets/images/logo.svg" alt="Kenoji" />
       </header>
       <main>
-        <section>
-          <h1>
-            A sua biblioteca de Emojis, <strong>grátis</strong> e para
-            <strong>sempre</strong>
-          </h1>
+        <section class="hero">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              A sua biblioteca de Emojis,
+              <strong class="highlight-word">grátis</strong> e para
+              <strong class="highlight-word">sempre</strong>
+            </h1>
+            <p class="hero__description">
+              É só buscar e depois fazer o download. <br />
+              <span class="upper">Experimente</span>
+            </p>
+            <form action="" class="hero__form">
+              <input autofocus type="text" placeholder="Ex: Smile" />
+              <input type="submit" value="Buscar" class="hero__btn-form" />
+            </form>
+          </div>
 
-          <p>
-            É só buscar e depois fazer o download. <br />
-            <span class="upper">Experimente</span>
-          </p>
-          <form action="">
-            <input type="text" placeholder="Ex: Smile" />
-            <input type="submit" value="Buscar" />
-          </form>
+          <div class="hero__animation">
+            <img
+              class="hero__smiley-img"
+              src="assets/images/emoji-1.svg"
+              alt=""
+            />
+            <img
+              class="hero__smiley-img"
+              src="assets/images/emoji-2.svg"
+              alt=""
+            />
+            <img
+              class="hero__smiley-img"
+              src="assets/images/emoji-3.svg"
+              alt=""
+            />
+            <img
+              class="hero__smiley-img"
+              src="assets/images/emoji-4.svg"
+              alt=""
+            />
+            <img
+              class="hero__smiley-img"
+              src="assets/images/emoji-5.svg"
+              alt=""
+            />
+            <img
+              class="hero__smiley-img"
+              src="assets/images/emoji-6.svg"
+              alt=""
+            />
+          </div>
         </section>
-        <div class="animation">
-          <img src="images/emoji-1.svg" alt="" />
-          <img src="images/emoji-2.svg" alt="" />
-          <img src="images/emoji-3.svg" alt="" />
-          <img src="images/emoji-4.svg" alt="" />
-          <img src="images/emoji-5.svg" alt="" />
-          <img src="images/emoji-6.svg" alt="" />
-        </div>
       </main>
     </div>
   </body>
