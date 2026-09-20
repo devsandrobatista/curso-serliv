@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SanBank Card</title>
+
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      /*
+      #0F172A Background
+      #2563EB Primary
+      #38BDF8 Accent
+      #F8FAFC Text
+      */
+
+      :root {
+        --border: 0.5px solid #000;
+      }
+
+      /* feedback */
+
+      .card-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        color: #f8fafc;
+        font-family: sans-serif;
+        font-size: 2rem;
+
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 1s;
+
+        position: relative;
+      }
+
+      .wrapper {
+        perspective: 100rem;
+        max-width: 700px;
+        width: 90%;
+        height: 300px;
+      }
+
+      .card__face {
+        background: #0f172a linear-gradient(#2563eb, #0f172a 40%);
+        border: 1px solid #f2b705;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+
+      .card__face--front {
+        padding: 32px;
+      }
+
+      .card__logo {
+        font-size: 52px;
+        text-align: right;
+        text-shadow: 1px 1px 0 #f2b705;
+      }
+
+      .card__chip {
+        background: linear-gradient(90deg, #a67d02, #ffc71f, #f2b705);
+        width: 62px;
+        height: 44px;
+        border: 2px solid #000;
+        border-radius: 8px;
+        margin-bottom: 16px;
+
+        display: grid;
+        grid-template-columns: 1fr repeat(2, 0.5fr) 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
+        counter-reset: contador;
+      }
+
+      .border {
+        /* Active to see order
+        counter-increment: contador;
+        position: relative;
+        &:after {
+          position: absolute;
+          font-size: 0.5rem;
+          content: counter(contador);
+          color: #000;
+        } */
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(4) {
+          border-bottom: var(--border);
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(6) {
+          border-right: var(--border);
+        }
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7) {
+          border-top: var(--border);
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          border-left: var(--border);
+        }
+        &:nth-child(2) {
+          grid-column: 1;
+          grid-row: 2 / 3;
+        }
+        &:nth-child(3) {
+          grid-row: 3;
+        }
+        &:nth-child(4) {
+          grid-column: 4;
+        }
+        &:nth-child(5) {
+          grid-column: 4;
+          grid-row: 3;
+        }
+        &:nth-child(6) {
+          grid-column: 1 / span 2;
+          grid-row: 4;
+        }
+        &:nth-child(7) {
+          grid-column: 3 / span 2;
+          grid-row: 4;
+        }
+      }
+
+      .card__datas {
+        color: color-mix(in srgb, white 60%, gray 40%);
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .card__number {
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 100%;
+      }
+      .card__valid {
+        text-align: center;
+      }
+
+      .card__face--back {
+        padding-top: 32px;
+      }
+
+      .card__face--back .gold-bar {
+        padding-top: 32px;
+        background: linear-gradient(90deg, #a67d02, #ffc71f, #f2b705);
+        width: 100%;
+        height: 60px;
+      }
+
+      .card__face--back .cvc {
+        padding: 32px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .card__face--back .cvc__bar {
+        flex: 1;
+        padding-inline: 8px;
+        background: #f8fafc;
+        color: #0f172a;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+      }
+
+      .cvc__name {
+        font-family: cursive;
+        font-weight: 100;
+      }
+
+      .wrapper:has(input[type="checkbox"]:checked) .card {
+        transform: rotateY(180deg);
+      }
+
+      input[type="checkbox"] {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .card__face--back {
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="wrapper">
+        <div class="card">
+          <input type="checkbox" name="" id="" />
+          <div class="card__face card__face--front">
+            <div class="card__logo">SanBank</div>
+            <div class="card__chip">
+              <span class="border"></span>
+              <span class="border"></span>
+              <span class="border"></span>
+              <span class="border"></span>
+              <span class="border"></span>
+              <span class="border"></span>
+              <span class="border"></span>
+            </div>
+            <div class="card__datas">
+              <div class="card__number">
+                <span>4917</span>
+                <span>0382</span>
+                <span>6559</span>
+              </div>
+              <div class="card__name">devsandro</div>
+              <div class="card__valid">
+                <span style="display: block; font-size: 1rem">Month/Year</span>
+                12/35
+              </div>
+            </div>
+          </div>
+          <div class="card__face card__face--back">
+            <div class="gold-bar"></div>
+            <div class="cvc">
+              <span
+                >Authorized<br />
+                Signature</span
+              >
+              <div class="cvc__bar">
+                <span class="cvc__name">Developer Sandro</span>
+                <span class="cvc__code">887</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

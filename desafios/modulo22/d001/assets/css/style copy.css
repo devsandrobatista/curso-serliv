@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --color-blue-dark: #0e4c85;
+  --color-blue-deep: #0e2e34;
+  --color-blue-extra-light: #b9eaf9;
+  --md-bd-radius: 0.4rem;
+}
+
+@property --w-h {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+img {
+  display: block;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(
+    135deg,
+    var(--color-blue-dark),
+    var(--color-blue-deep)
+  );
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-h {
+  width: var(--w-h);
+  height: var(--w-h);
+}
+
+.main {
+  background: color-mix(
+    in srgb,
+    var(--color-blue-dark),
+    var(--color-blue-extra-light) 80%
+  );
+  padding: 1rem;
+  border-radius: var(--md-bd-radius);
+  box-shadow: 0 14px 8px var(--color-blue-deep);
+}
+
+.main__title {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.memory-board {
+  width: 600px;
+  height: 430px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+
+  perspective: 600px;
+}
+
+.card-wrapper {
+  position: relative;
+}
+
+.card__control {
+  display: inline-block;
+  position: absolute;
+  clip-path: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+  border-radius: var(--md-bd-radius);
+}
+
+.card__face {
+  border: 2px solid red;
+  border-radius: var(--md-bd-radius);
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card__face--front {
+  transform: rotateY(180deg);
+}
+
+.card__face--back {
+  background: url("../images/back.png") center/cover;
+}
+
+/* C O N T R O L S */
+.control-wrapper:has(.card__control:checked) .card {
+  transform: rotateY(180deg);
+}
+.control-wrapper:has(.card__control:focus-visible) .card {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}

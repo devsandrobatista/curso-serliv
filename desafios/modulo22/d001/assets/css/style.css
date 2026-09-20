@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-blue-dark: #0e4c85;
+  --color-blue-deep: #0e2e34;
+  --color-blue-extra-light: #b9eaf9;
+  --md-bd-radius: 0.4rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--color-blue-dark),
+    var(--color-blue-deep)
+  );
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background: color-mix(
+    in srgb,
+    var(--color-blue-dark),
+    var(--color-blue-extra-light) 80%
+  );
+  padding: 2rem;
+  border-radius: var(--md-bd-radius);
+  box-shadow: 0 14px 8px var(--color-blue-deep);
+}
+
+.main__title {
+  padding-bottom: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.wrapper {
+  width: 600px;
+  height: 430px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+  border-radius: var(--md-bd-radius);
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out;
+}
+
+.card__face {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--md-bd-radius);
+  backface-visibility: hidden;
+  position: absolute;
+  /* inset: 0; */
+}
+
+.card__face--front {
+  transform: rotateY(180deg);
+}
+
+.card__face--back {
+  background: url("../images/back.png") center/cover;
+}
+
+.controls {
+  position: absolute;
+  clip-path: rect(1px, 1px, 1px, 1p);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.main:has(#check1:checked) .card1,
+.main:has(#check2:checked) .card2,
+.main:has(#check3:checked) .card3,
+.main:has(#check4:checked) .card4,
+.main:has(#check5:checked) .card5,
+.main:has(#check6:checked) .card6,
+.main:has(#check7:checked) .card7,
+.main:has(#check8:checked) .card8,
+.main:has(#check9:checked) .card9,
+.main:has(#check10:checked) .card10,
+.main:has(#check11:checked) .card11,
+.main:has(#check12:checked) .card12,
+.main:has(#check13:checked) .card13,
+.main:has(#check14:checked) .card14,
+.main:has(#check15:checked) .card15,
+.main:has(#check16:checked) .card16 {
+  transform: rotateY(180deg);
+}
+.main:has(#check1:focus-visible) .card1,
+.main:has(#check2:focus-visible) .card2,
+.main:has(#check3:focus-visible) .card3,
+.main:has(#check4:focus-visible) .card4,
+.main:has(#check5:focus-visible) .card5,
+.main:has(#check6:focus-visible) .card6,
+.main:has(#check7:focus-visible) .card7,
+.main:has(#check8:focus-visible) .card8,
+.main:has(#check9:focus-visible) .card9,
+.main:has(#check10:focus-visible) .card10,
+.main:has(#check11:focus-visible) .card11,
+.main:has(#check12:focus-visible) .card12,
+.main:has(#check13:focus-visible) .card13,
+.main:has(#check14:focus-visible) .card14,
+.main:has(#check15:focus-visible) .card15,
+.main:has(#check16:focus-visible) .card16 {
+  outline: 2px solid red;
+  outline-offset: 2px;
+}

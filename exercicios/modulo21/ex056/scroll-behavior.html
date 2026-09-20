@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolling</title>
+
+    <style>
+      :root {
+        --color-primary: #0e4c85; /* Azul Profundo */
+        --color-secondary: #2474a6; /* Azul Oceano */
+        --color-text: #0e2e34; /* Verde Petróleo */
+
+        --color-text1: #f94efa;
+        --color-text2: #fa4e3f;
+        --color-text3: #f9547f;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: #f4f5f0;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        color: var(--color-text);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      main {
+        scroll-behavior: smooth;
+      }
+
+      section {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .header {
+        width: 100%;
+        background: color-mix(var(--color-primary), transparent 75%);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        padding: 1rem 2rem;
+        border: 1px solid color-mix(var(--color-secondary), transparent 69%);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      @supports (backdrop-filter: blur(1px)) {
+        .header {
+          background: color-mix(var(--color-primary), transparent 75%);
+          backdrop-filter: blur(18px);
+        }
+      }
+
+      .header__logo {
+        background: linear-gradient(90deg, #0e4c85, #0e2e34);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        /* GRADIENT TEXT */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+      }
+
+      .header__list {
+        list-style-type: none;
+        gap: 1rem;
+      }
+
+      .header__list a {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        border: 2.4px solid transparent;
+        font-weight: 500;
+        text-decoration: none;
+
+        transition:
+          background 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .header__list a:hover {
+        color: var(--color-primary);
+
+        /* Glassmorphism CSS */
+        background: rgba(255, 255, 255, 0);
+        backdrop-filter: blur(29px);
+        -webkit-backdrop-filter: blur(29px);
+        border-radius: 8px;
+        border: 2.4px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      }
+
+      @supports (backdrop-filter: blur(1px)) {
+        .header__list a:hover {
+          background: rgba(255, 255, 255, 0);
+          backdrop-filter: blur(29px);
+        }
+      }
+
+      .hero__title {
+        color: var(--color-text1);
+        font-size: 5rem;
+      }
+
+      .projects__title {
+        color: var(--color-text2);
+        font-size: 4rem;
+      }
+
+      .contacts__title {
+        font-size: 4rem;
+        color: var(--color-text3);
+      }
+
+      .footer {
+        background: color-mix(#66b8d9, #b9eaf9);
+        padding: 0.6rem;
+      }
+
+      .footer__copyriht {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header flex">
+      <div class="header__logo" title="Logo Scrolling">
+        <span>Scrolling</span>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list flex">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contacts">Contatos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <h1 class="hero__title">Página Inicial</h1>
+      </section>
+      <section class="projects" id="projects">
+        <h2 class="projects__title">Projetos</h2>
+      </section>
+      <section class="contacts" id="contacts">
+        <h2 class="contacts__title">Contatos</h2>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyriht">
+        copyright &copy; <span class="year"></span> <span>@devsandro</span>
+      </p>
+    </footer>
+
+    <script>
+      const yearEl = document.querySelector(".year");
+      const currentYear = new Date().getFullYear();
+      yearEl.textContent = currentYear;
+    </script>
+  </body>
+</html>

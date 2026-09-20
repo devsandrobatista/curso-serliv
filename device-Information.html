@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informações da tela</title>
+  </head>
+  <body>
+    <h1>Informações do dispositivo</h1>
+
+    <p id="viewport"></p>
+    <p id="dpr"></p>
+    <p id="screen"></p>
+
+    <script>
+      const viewport = document.querySelector("#viewport");
+      const dpr = document.querySelector("#dpr");
+      const screen = document.querySelector("#screen");
+
+      viewport.textContent = `Viewport CSS: ${window.innerWidth} × ${window.innerHeight}px`;
+
+      dpr.textContent = `DPR: ${window.devicePixelRatio}`;
+
+      screen.textContent = `Tela física (aprox.): ${screen.width * window.devicePixelRatio} × ${screen.height * window.devicePixelRatio}px`;
+    </script>
+  </body>
+</html>

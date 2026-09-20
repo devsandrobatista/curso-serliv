@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variáveis - Parte 2</title>
+
+    <style>
+      :root {
+        /* --angle: 0deg; */
+        --bg-color: #0e4c85;
+        --bg-color2: #b9eaf9;
+        --text-color: color-mix(var(--bg-color), #000 40%);
+      }
+
+      body {
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-family: sans-serif;
+      }
+
+      @property --angle {
+        syntax: "<angle>";
+        inherits: false;
+        initial-value: 0deg;
+      }
+
+      .anima {
+        width: 200px;
+        height: 200px;
+        background: var(--bg-color2);
+        transform: rotate(var(--angle));
+        animation: rotate-anima 2s linear infinite;
+
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      @keyframes rotate-anima {
+        to {
+          --angle: 360deg;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="anima">Anima</div>
+  </body>
+</html>

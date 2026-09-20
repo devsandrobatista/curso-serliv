@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My New CodePen</title>
+
+    <style>
+      @property --progress {
+        syntax: "<number>";
+        inherits: false;
+        initial-value: 0;
+      }
+
+      .progress {
+        padding: 1rem;
+        border: 1px solid #000;
+      }
+
+      .progress__bar {
+        height: 6px;
+        background: #00d230;
+        transform: scaleX(var(--progress));
+        transform-origin: left;
+        transition: --progress 10s linear;
+      }
+
+      .progress:hover .progress__bar {
+        --progress: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress">
+      <h2>Progresso</h2>
+      <div class="progress__bar"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
